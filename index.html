@@ -1,60 +1,964 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Spotlight Success</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotlight Success | Greg Lowrance</title>
+  <meta
+    name="description"
+    content="Spotlight Success offers high-level guidance for commercials, print, acting, production, and professional business setup."
+  />
   <style>
+    :root {
+      --bg: #070707;
+      --bg-2: #0d0d0d;
+      --panel: rgba(255, 255, 255, 0.05);
+      --panel-2: rgba(255, 255, 255, 0.08);
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #f5f1e8;
+      --muted: #cbbfae;
+      --soft: #a79a89;
+      --gold: #d7a947;
+      --gold-2: #f0d18e;
+      --gold-deep: #9b6a16;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.42);
+      --radius: 22px;
+      --max: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial;
-      background: #0a0a0a;
-      color: white;
       margin: 0;
-      padding: 40px;
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(215, 169, 71, 0.16), transparent 24%),
+        radial-gradient(circle at 84% 14%, rgba(215, 169, 71, 0.13), transparent 20%),
+        radial-gradient(circle at 50% 70%, rgba(255,255,255,0.03), transparent 30%),
+        linear-gradient(180deg, #060606 0%, #0a0a0a 55%, #050505 100%);
+      overflow-x: hidden;
     }
-    h1 { font-size: 42px; }
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      margin: 10px 10px 0 0;
-      background: white;
-      color: black;
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(to bottom, rgba(255,255,255,0.02), transparent 15%),
+        radial-gradient(circle at center, transparent 58%, rgba(0,0,0,0.24) 100%);
+      z-index: 0;
+    }
+
+    .glow {
+      position: fixed;
+      border-radius: 999px;
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.16;
+    }
+
+    .glow.one {
+      width: 420px;
+      height: 420px;
+      top: -120px;
+      right: -90px;
+      background: rgba(215, 169, 71, 0.55);
+      animation: drift1 14s ease-in-out infinite;
+    }
+
+    .glow.two {
+      width: 360px;
+      height: 360px;
+      bottom: -120px;
+      left: -80px;
+      background: rgba(215, 169, 71, 0.42);
+      animation: drift2 18s ease-in-out infinite;
+    }
+
+    @keyframes drift1 {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(-20px, 18px); }
+    }
+
+    @keyframes drift2 {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(24px, -16px); }
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      color: var(--text);
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
-    .section { margin-top: 60px; }
+
+    .brand-mark {
+      width: 15px;
+      height: 15px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      box-shadow: 0 0 24px rgba(215, 169, 71, 0.4);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links .nav-cta {
+      padding: 11px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(215, 169, 71, 0.35);
+      background: rgba(215, 169, 71, 0.08);
+      color: var(--gold-2);
+    }
+
+    .hero {
+      max-width: var(--max);
+      margin: 0 auto;
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
+      align-items: center;
+      padding: 36px 24px 40px;
+    }
+
+    .hero-copy {
+      opacity: 0;
+      transform: translateY(18px);
+      animation: riseIn 0.9s ease forwards;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-2);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 54px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold));
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.5rem, 7vw, 6.25rem);
+      line-height: 0.93;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .gold {
+      color: var(--gold);
+      text-shadow: 0 0 28px rgba(215, 169, 71, 0.12);
+    }
+
+    .lead {
+      margin-top: 22px;
+      max-width: 720px;
+      font-size: clamp(1.07rem, 1.4vw, 1.26rem);
+      line-height: 1.78;
+      color: var(--muted);
+    }
+
+    .micro-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+      margin: 28px 0 0;
+      padding: 0;
+    }
+
+    .micro-points li {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: #e9dfcf;
+      font-size: 0.92rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      text-decoration: none;
+      padding: 16px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      min-width: 210px;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: #1c1408;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      box-shadow: 0 14px 32px rgba(215, 169, 71, 0.22);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .hero-note {
+      margin-top: 18px;
+      max-width: 680px;
+      color: rgba(255,255,255,0.55);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 600px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: riseIn 1s ease 0.12s forwards;
+    }
+
+    .visual-frame {
+      position: absolute;
+      inset: 32px 0 0 36px;
+      border-radius: 30px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 22% 18%, rgba(215,169,71,0.16), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .visual-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to left, rgba(8,8,8,0.02), rgba(8,8,8,0.52) 65%, rgba(8,8,8,0.92) 100%),
+        linear-gradient(to top, rgba(8,8,8,0.10), rgba(8,8,8,0.0) 30%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .portrait {
+      position: absolute;
+      right: 26px;
+      bottom: 0;
+      width: min(100%, 350px);
+      max-height: 92%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 24px 24px 0 0;
+      filter: contrast(1.02) saturate(1.03) drop-shadow(0 18px 36px rgba(0,0,0,0.34));
+      z-index: 1;
+    }
+
+    .portrait-card {
+      position: absolute;
+      top: 28px;
+      left: 28px;
+      width: min(72%, 340px);
+      padding: 22px 20px;
+      border-radius: 20px;
+      background: rgba(9,9,9,0.58);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(10px);
+      z-index: 3;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.28);
+    }
+
+    .portrait-card h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .portrait-card p {
+      margin: 0;
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: #d4cabd;
+    }
+
+    .sections {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 6px 24px 100px;
+    }
+
+    .trio {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      padding: 28px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: rgba(215,169,71,0.12);
+      color: var(--gold-2);
+      border: 1px solid rgba(215,169,71,0.24);
+      margin-bottom: 18px;
+      font-size: 1.12rem;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.76;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 22px;
+      margin-top: 22px;
+      margin-bottom: 22px;
+    }
+
+    .panel {
+      padding: 34px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.09);
+      box-shadow: var(--shadow);
+    }
+
+    .panel h2 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.04;
+      text-wrap: balance;
+    }
+
+    .panel .sub {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.82;
+      margin-bottom: 24px;
+      max-width: 760px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 16px 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .step-num {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      color: #241707;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(215,169,71,0.18);
+    }
+
+    .step h4 {
+      margin: 2px 0 6px;
+      font-size: 1.06rem;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.68;
+    }
+
+    .checklist {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 26px;
+      color: #ece3d5;
+      line-height: 1.72;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    .inline-link {
+      display: inline-flex;
+      margin-top: 18px;
+      text-decoration: none;
+      color: var(--gold-2);
+      font-weight: 700;
+      border-bottom: 1px solid rgba(215,169,71,0.38);
+      padding-bottom: 2px;
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .price-card {
+      padding: 28px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.09);
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+      box-shadow: var(--shadow);
+    }
+
+    .price-card.featured {
+      background: linear-gradient(180deg, rgba(215,169,71,0.18), rgba(255,255,255,0.04));
+      border-color: rgba(215,169,71,0.28);
+      transform: translateY(-4px);
+    }
+
+    .label {
+      color: var(--gold-2);
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .price-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .price-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.72;
+    }
+
+    .final-cta {
+      margin-top: 28px;
+      padding: 40px 24px;
+      border-radius: 30px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top center, rgba(215,169,71,0.18), transparent 34%),
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta h2 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.05rem, 4vw, 3.4rem);
+      line-height: 1.05;
+    }
+
+    .final-cta p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1.02rem;
+    }
+
+    .compliance {
+      max-width: 920px;
+      margin: 28px auto 0;
+      text-align: center;
+      color: rgba(255,255,255,0.48);
+      font-size: 0.82rem;
+      line-height: 1.68;
+    }
+
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 42px 24px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes riseIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .hero,
+      .trio,
+      .split,
+      .pricing {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-visual {
+        min-height: 500px;
+        order: -1;
+      }
+
+      .visual-frame {
+        inset: 0;
+      }
+
+      .portrait {
+        width: min(72%, 320px);
+        right: 14px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero,
+      .sections,
+      footer {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .hero-visual {
+        min-height: 410px;
+      }
+
+      .portrait {
+        width: min(76%, 250px);
+        right: 10px;
+      }
+
+      .portrait-card {
+        left: 14px;
+        top: 14px;
+        width: calc(100% - 110px);
+        padding: 16px;
+      }
+
+      .panel,
+      .card,
+      .price-card,
+      .final-cta {
+        padding: 22px;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
-
 <body>
+  <div class="glow one"></div>
+  <div class="glow two"></div>
 
-<h1>Spotlight Success</h1>
+  <div class="wrap">
+    <nav class="nav">
+      <a href="#" class="brand">
+        <span class="brand-mark"></span>
+        <span>Spotlight Success</span>
+      </a>
 
-<p>Break into commercials, print, acting, and production — without wasting time or money.</p>
+      <div class="nav-links">
+        <a href="#system">The System</a>
+        <a href="#about">About Greg</a>
+        <a href="#coaching">Coaching</a>
+        <a class="nav-cta" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Strategy%20Call&body=Hi%20Greg,%20I%20would%20like%20to%20book%20a%20strategy%20call.">Book a Call</a>
+      </div>
+    </nav>
 
-<a class="btn" href="#">Download Free Guide</a>
-<a class="btn" href="#">Book a Strategy Call</a>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Enter the Industry</div>
 
-<div class="section">
-<h2>The System</h2>
-<p>1. Foundation</p>
-<p>2. Commercials</p>
-<p>3. Commercial Lifestyle Print</p>
-<p>4. Acting</p>
-<p>5. Production</p>
-</div>
+        <h1>
+          Spotlight<br />
+          <span class="gold">Success</span>
+        </h1>
 
-<div class="section">
-<h2>About Greg Lowrance</h2>
-<p>Worked with brands like Apple, Amazon, Coca-Cola, Target, Verizon, and more.</p>
-<p>Founder of Nucleus Talent Management.</p>
-</div>
+        <p class="lead">
+          High-level guidance for commercials, print, acting, production, and professional business setup. Built for people who want a clearer path, a stronger presentation, and smarter next steps in entertainment.
+        </p>
 
-<div class="section">
-<h2>Coaching</h2>
-<p>$95 – Clarity Call</p>
-<p>$175 – Strategy Session</p>
-<p>$495 – Starter Package</p>
-</div>
+        <ul class="micro-points">
+          <li>Commercials</li>
+          <li>Print</li>
+          <li>Acting</li>
+          <li>Production</li>
+          <li>Business Setup</li>
+        </ul>
 
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://bit.ly/GetSpotlightNow" target="_blank" rel="noopener noreferrer">
+            Download Free Guide
+          </a>
+          <a class="btn btn-secondary" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Strategy%20Call&body=Hi%20Greg,%20I%20would%20like%20to%20book%20a%20strategy%20call.">
+            Book a Strategy Call
+          </a>
+        </div>
+
+        <div class="hero-note">
+          Optional educational guidance from Greg Lowrance. Thoughtful, polished, practical, and designed to help you move with more confidence and less wasted time.
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-frame">
+          <div class="portrait-card">
+            <h3>Greg Lowrance</h3>
+            <p>
+              Founder of Nucleus Talent Management. Strategic guidance designed to help talent think more clearly, present more professionally, and navigate the business with greater confidence.
+            </p>
+          </div>
+
+          <img src="greg.jpg" alt="Greg Lowrance" class="portrait" />
+        </div>
+      </div>
+    </section>
+
+    <main class="sections">
+      <section class="trio reveal">
+        <div class="card">
+          <div class="icon">✦</div>
+          <h3>Get Clear</h3>
+          <p>
+            Understand what matters first so your effort goes into the right moves instead of scattered activity.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">✦</div>
+          <h3>Look More Professional</h3>
+          <p>
+            Sharpen how you present yourself so preventable mistakes do not undercut your opportunities.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">✦</div>
+          <h3>Move Smarter</h3>
+          <p>
+            Learn how to approach acting, print, commercials, production, and business setup with more structure.
+          </p>
+        </div>
+      </section>
+
+      <section id="system" class="split reveal">
+        <div class="panel">
+          <h2>The Spotlight Success System</h2>
+          <div class="sub">
+            A five-part framework designed to help talent understand the landscape, strengthen their position, and make better strategic decisions from the beginning.
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div>
+                <h4>Foundation</h4>
+                <p>Build a stronger base so your materials, direction, and next moves all work together.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">2</div>
+              <div>
+                <h4>Commercials</h4>
+                <p>Understand how the commercial world works and how to present yourself more effectively within it.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">3</div>
+              <div>
+                <h4>Commercial Lifestyle Print</h4>
+                <p>See where your look may fit and how print opportunities can support a broader career path.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">4</div>
+              <div>
+                <h4>Acting</h4>
+                <p>Get clearer on positioning, professionalism, and how to avoid some of the most common mistakes.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">5</div>
+              <div>
+                <h4>Production</h4>
+                <p>Gain a more practical understanding of the production side so your industry knowledge is more complete.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Business Setup Guidance</h2>
+          <div class="sub">
+            Greg can also help explain basic business setup steps, including forming an entity through the proper state process and obtaining an EIN for those who want to operate more professionally.
+          </div>
+
+          <ul class="checklist">
+            <li>Understand the basic purpose of an entity and EIN in a working talent context.</li>
+            <li>See how some performers use a properly formed business to organize income and expenses more cleanly.</li>
+            <li>Get practical guidance on setup steps without confusion or overcomplication.</li>
+            <li>Confirm any legal, tax, or accounting specifics with your own qualified professionals.</li>
+          </ul>
+
+          <a class="inline-link" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Business%20Setup%20Guidance&body=Hi%20Greg,%20I%20would%20like%20more%20information%20about%20business%20setup%20guidance.">
+            Ask About Business Setup
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="split reveal">
+        <div class="panel">
+          <h2>About Greg Lowrance</h2>
+          <div class="sub">
+            Greg brings decades of business and entertainment experience to the conversation, with an emphasis on strategy, positioning, and helping people approach the industry with more intelligence and professionalism.
+          </div>
+
+          <ul class="checklist">
+            <li>Worked with brands including Apple, Amazon, Coca-Cola, Target, Verizon, and more.</li>
+            <li>Founder of Nucleus Talent Management.</li>
+            <li>Focused on practical thinking, stronger positioning, and better long-term decisions.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Why This Approach Stands Out</h2>
+          <div class="sub">
+            This is not about hype or noise. It is about seeing the business more clearly, presenting yourself more strongly, and making better decisions with your time, money, and energy.
+          </div>
+
+          <a class="btn btn-primary" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Question&body=Hi%20Greg,%20I%20have%20a%20question%20about%20Spotlight%20Success.">
+            Email Greg Directly
+          </a>
+        </div>
+      </section>
+
+      <section id="coaching" class="reveal">
+        <div class="panel">
+          <h2>Optional Coaching</h2>
+          <div class="sub">
+            Strategy-based conversations for people who want a more direct look at their path, presentation, and next steps.
+          </div>
+
+          <div class="pricing">
+            <div class="price-card">
+              <div class="label">Entry Point</div>
+              <div class="price">$95</div>
+              <div class="price-title">Clarity Call</div>
+              <p>
+                A focused conversation designed to help you get sharper on what matters most right now.
+              </p>
+              <a class="inline-link" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Clarity%20Call&body=Hi%20Greg,%20I%20am%20interested%20in%20the%20$95%20Clarity%20Call.">
+                Request This Call
+              </a>
+            </div>
+
+            <div class="price-card featured">
+              <div class="label">Most Popular</div>
+              <div class="price">$175</div>
+              <div class="price-title">Strategy Session</div>
+              <p>
+                A deeper session for people who want more tailored guidance around direction, materials, and positioning.
+              </p>
+              <a class="inline-link" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Strategy%20Session&body=Hi%20Greg,%20I%20am%20interested%20in%20the%20$175%20Strategy%20Session.">
+                Request This Session
+              </a>
+            </div>
+
+            <div class="price-card">
+              <div class="label">Expanded Support</div>
+              <div class="price">$495</div>
+              <div class="price-title">Starter Package</div>
+              <p>
+                A more involved option for those who want broader guidance and a stronger starting structure.
+              </p>
+              <a class="inline-link" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Starter%20Package&body=Hi%20Greg,%20I%20am%20interested%20in%20the%20$495%20Starter%20Package.">
+                Request Details
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta reveal">
+        <h2>Move Forward With More Confidence</h2>
+        <p>
+          Start with the free guide or reach out directly if you want a more tailored conversation about your next step.
+        </p>
+
+        <div class="cta-row" style="justify-content:center;">
+          <a class="btn btn-primary" href="https://bit.ly/GetSpotlightNow" target="_blank" rel="noopener noreferrer">
+            Download Free Guide
+          </a>
+          <a class="btn btn-secondary" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Strategy%20Call&body=Hi%20Greg,%20I%20would%20like%20to%20book%20a%20strategy%20call.">
+            Book a Strategy Call
+          </a>
+        </div>
+      </section>
+
+      <div class="compliance">
+        Coaching and educational services are optional and are not required for representation or submission opportunities. Any business, legal, or tax-related decisions should be confirmed with the appropriate qualified professionals.
+      </div>
+    </main>
+
+    <footer>
+      <div>Spotlight Success</div>
+      <div>Greg Lowrance</div>
+    </footer>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
