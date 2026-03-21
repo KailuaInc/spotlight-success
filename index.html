@@ -2,23 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
   <title>Spotlight Success</title>
 
   <meta
     name="description"
-    content="Spotlight Success is a premium coaching and training brand focused on strategy, positioning, and professional direction in commercials, print, acting, and production."
+    content="Spotlight Success offers premium coaching and training focused on clarity, positioning, strategy, and professional direction in commercials, print, acting, and production."
   />
+  <meta
+    name="keywords"
+    content="Spotlight Success, Greg Lowrance, entertainment coaching, acting coaching, commercials, print modeling, production guidance, industry strategy"
+  />
+  <meta name="theme-color" content="#090909" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Spotlight Success" />
   <meta
     property="og:description"
-    content="Strategic coaching and training for individuals serious about building a professional path in commercials, print, acting, and production."
+    content="Strategic coaching and training for people serious about building a professional path in commercials, print, acting, and production."
   />
   <meta property="og:url" content="https://project-x9g7f.vercel.app/" />
-  <meta property="og:image" content="https://project-x9g7f.vercel.app/spotlight-preview.jpg" />
+  <meta
+    property="og:image"
+    content="https://project-x9g7f.vercel.app/spotlight-preview.jpg"
+  />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Spotlight Success" />
@@ -27,1349 +37,1408 @@
   <meta name="twitter:title" content="Spotlight Success" />
   <meta
     name="twitter:description"
-    content="Strategic coaching and training for individuals serious about building a professional path in commercials, print, acting, and production."
+    content="Strategic coaching and training for people serious about building a professional path in commercials, print, acting, and production."
   />
-  <meta name="twitter:image" content="https://project-x9g7f.vercel.app/spotlight-preview.jpg" />
+  <meta
+    name="twitter:image"
+    content="https://project-x9g7f.vercel.app/spotlight-preview.jpg"
+  />
 
   <style>
-    :root{
-      --bg:#050505;
-      --bg-2:#0a0a0a;
-      --bg-3:#111111;
-      --panel:rgba(255,255,255,0.05);
-      --panel-2:rgba(255,255,255,0.08);
-      --panel-3:rgba(255,255,255,0.03);
-      --line:rgba(255,255,255,0.10);
-      --line-strong:rgba(255,255,255,0.16);
-      --text:#f5f1e8;
-      --muted:#cabfae;
-      --soft:#a79a88;
-      --gold:#d8aa49;
-      --gold-2:#f0d28f;
-      --gold-3:#b58322;
-      --danger:#cf4b4b;
-      --success:#4fb378;
-      --shadow:0 20px 60px rgba(0,0,0,0.42);
-      --shadow-soft:0 14px 36px rgba(0,0,0,0.28);
-      --radius-xl:30px;
-      --radius-lg:24px;
-      --radius-md:18px;
-      --radius-sm:14px;
-      --max:1240px;
-      --nav-height:84px;
+    :root {
+      --bg: #070707;
+      --bg-2: #0b0b0b;
+      --bg-3: #101010;
+      --panel: rgba(255, 255, 255, 0.045);
+      --panel-2: rgba(255, 255, 255, 0.06);
+      --panel-3: rgba(255, 255, 255, 0.035);
+      --line: rgba(255, 255, 255, 0.09);
+      --line-strong: rgba(255, 255, 255, 0.14);
+      --text: #f6f2e9;
+      --muted: #cbbfae;
+      --soft: #a99c8a;
+      --gold: #d6aa47;
+      --gold-2: #f0d28f;
+      --gold-3: #b98728;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.42);
+      --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.24);
+      --radius-xl: 32px;
+      --radius-lg: 26px;
+      --radius-md: 20px;
+      --radius-sm: 16px;
+      --max: 1240px;
+      --nav-h: 84px;
     }
 
-    *{
-      box-sizing:border-box;
+    * {
+      box-sizing: border-box;
     }
 
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
     }
 
-    body{
-      margin:0;
-      color:var(--text);
+    body {
+      margin: 0;
+      color: var(--text);
       background:
-        radial-gradient(circle at 16% 8%, rgba(216,170,73,0.13), transparent 24%),
-        radial-gradient(circle at 90% 12%, rgba(216,170,73,0.09), transparent 20%),
-        radial-gradient(circle at 12% 88%, rgba(216,170,73,0.08), transparent 18%),
-        linear-gradient(180deg, #050505 0%, #0b0b0b 52%, #050505 100%);
-      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      overflow-x:hidden;
+        radial-gradient(circle at 12% 10%, rgba(214, 170, 71, 0.12), transparent 24%),
+        radial-gradient(circle at 86% 12%, rgba(214, 170, 71, 0.07), transparent 20%),
+        radial-gradient(circle at 15% 88%, rgba(214, 170, 71, 0.06), transparent 18%),
+        linear-gradient(180deg, #050505 0%, #0b0b0b 48%, #060606 100%);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      overflow-x: hidden;
+      min-width: 320px;
     }
 
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      z-index:0;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
       background:
-        linear-gradient(to bottom, rgba(255,255,255,0.015), transparent 18%),
-        radial-gradient(circle at center, transparent 58%, rgba(0,0,0,0.16) 100%);
+        linear-gradient(to bottom, rgba(255,255,255,0.012), transparent 18%),
+        radial-gradient(circle at center, transparent 58%, rgba(0,0,0,0.15) 100%);
     }
 
-    img{
-      max-width:100%;
-      display:block;
+    img {
+      display: block;
+      max-width: 100%;
     }
 
-    a{
-      color:inherit;
+    a {
+      color: inherit;
     }
 
     button,
     input,
     select,
-    textarea{
-      font:inherit;
+    textarea {
+      font: inherit;
     }
 
-    ::selection{
-      background:rgba(216,170,73,0.30);
-      color:#fff;
+    ::selection {
+      background: rgba(214, 170, 71, 0.28);
+      color: #fff;
     }
 
-    .wrap{
-      position:relative;
-      z-index:1;
+    .page-wrap {
+      position: relative;
+      z-index: 1;
     }
 
-    .container{
-      width:min(var(--max), calc(100% - 40px));
-      margin:0 auto;
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
     }
 
-    .section-stack{
-      padding:12px 0 102px;
+    .section {
+      padding: 28px 0 110px;
     }
 
-    .reveal{
-      opacity:0;
-      transform:translateY(22px);
-      transition:opacity .8s ease, transform .8s ease;
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.82s ease, transform 0.82s ease;
     }
 
-    .reveal.visible{
-      opacity:1;
-      transform:translateY(0);
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      color:var(--gold-2);
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      font-size:.80rem;
-      font-weight:700;
-      margin-bottom:24px;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-2);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 22px;
     }
 
-    .eyebrow::before{
-      content:"";
-      width:54px;
-      height:1px;
-      background:linear-gradient(to right, transparent, var(--gold));
-      display:block;
+    .eyebrow::before {
+      content: "";
+      width: 56px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold));
+      display: block;
     }
 
-    .gold{
-      color:var(--gold);
+    .gold {
+      color: var(--gold);
     }
 
-    .tiny{
-      font-size:.84rem;
-      line-height:1.66;
-      color:rgba(255,255,255,.52);
+    .max-760 {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .glow{
-      position:fixed;
-      border-radius:999px;
-      filter:blur(88px);
-      pointer-events:none;
-      z-index:0;
-      opacity:.15;
+    .max-820 {
+      max-width: 820px;
     }
 
-    .glow.one{
-      width:420px;
-      height:420px;
-      top:-120px;
-      right:-90px;
-      background:rgba(216,170,73,.55);
-      animation:drift1 16s ease-in-out infinite;
+    .glow {
+      position: fixed;
+      border-radius: 999px;
+      filter: blur(92px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.14;
     }
 
-    .glow.two{
-      width:360px;
-      height:360px;
-      bottom:-120px;
-      left:-80px;
-      background:rgba(216,170,73,.35);
-      animation:drift2 19s ease-in-out infinite;
+    .glow.one {
+      width: 420px;
+      height: 420px;
+      top: -130px;
+      right: -100px;
+      background: rgba(214, 170, 71, 0.52);
+      animation: drift1 16s ease-in-out infinite;
     }
 
-    .glow.three{
-      width:240px;
-      height:240px;
-      top:42%;
-      left:48%;
-      background:rgba(216,170,73,.12);
-      animation:drift3 20s ease-in-out infinite;
+    .glow.two {
+      width: 360px;
+      height: 360px;
+      bottom: -120px;
+      left: -80px;
+      background: rgba(214, 170, 71, 0.34);
+      animation: drift2 19s ease-in-out infinite;
     }
 
-    @keyframes drift1{
-      0%,100%{ transform:translate(0,0); }
-      50%{ transform:translate(-18px,14px); }
+    .glow.three {
+      width: 240px;
+      height: 240px;
+      top: 42%;
+      left: 47%;
+      background: rgba(214, 170, 71, 0.12);
+      animation: drift3 21s ease-in-out infinite;
     }
 
-    @keyframes drift2{
-      0%,100%{ transform:translate(0,0); }
-      50%{ transform:translate(22px,-16px); }
+    @keyframes drift1 {
+      0%,100% { transform: translate(0,0); }
+      50% { transform: translate(-18px, 14px); }
     }
 
-    @keyframes drift3{
-      0%,100%{ transform:translate(0,0) scale(1); }
-      50%{ transform:translate(-16px,10px) scale(1.05); }
+    @keyframes drift2 {
+      0%,100% { transform: translate(0,0); }
+      50% { transform: translate(22px, -16px); }
     }
 
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter:blur(10px);
-      background:linear-gradient(to bottom, rgba(5,5,5,.88), rgba(5,5,5,.55));
-      border-bottom:1px solid rgba(255,255,255,.04);
+    @keyframes drift3 {
+      0%,100% { transform: translate(0,0) scale(1); }
+      50% { transform: translate(-16px, 10px) scale(1.04); }
     }
 
-    .nav{
-      min-height:var(--nav-height);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:22px;
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      backdrop-filter: blur(11px);
+      background: linear-gradient(to bottom, rgba(6,6,6,0.9), rgba(6,6,6,0.58));
+      border-bottom: 1px solid rgba(255,255,255,0.04);
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      text-decoration:none;
-      min-width:0;
-      flex-shrink:0;
+    .nav {
+      min-height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
     }
 
-    .brand-logo-wrap{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      width:42px;
-      height:42px;
-      border-radius:12px;
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:0 0 0 1px rgba(216,170,73,.08) inset;
-      overflow:hidden;
-      flex-shrink:0;
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      min-width: 0;
+      flex-shrink: 0;
     }
 
-    .brand-logo{
-      width:24px;
-      height:24px;
-      object-fit:contain;
-      filter:drop-shadow(0 0 10px rgba(216,170,73,.16));
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 0 0 1px rgba(214,170,71,0.08) inset;
+      overflow: hidden;
+      flex-shrink: 0;
     }
 
-    .brand-copy{
-      min-width:0;
+    .brand-mark img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 10px rgba(214,170,71,0.16));
     }
 
-    .brand-name{
-      display:block;
-      font-weight:800;
-      letter-spacing:.01em;
-      font-size:1rem;
-      color:var(--text);
-      line-height:1.05;
+    .brand-text {
+      min-width: 0;
     }
 
-    .brand-sub{
-      display:block;
-      margin-top:4px;
-      font-size:.72rem;
-      color:rgba(255,255,255,.48);
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      white-space:nowrap;
+    .brand-title {
+      display: block;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      font-size: 1rem;
+      line-height: 1.04;
+      color: var(--text);
     }
 
-    .nav-right{
-      display:flex;
-      align-items:center;
-      gap:20px;
-      margin-left:auto;
+    .brand-subtitle {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.48);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
-    .nav-links{
-      display:flex;
-      align-items:center;
-      gap:18px;
-      flex-wrap:wrap;
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-left: auto;
     }
 
-    .nav-links a{
-      text-decoration:none;
-      color:var(--muted);
-      font-size:.95rem;
-      transition:color .22s ease, opacity .22s ease;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    .nav-links a:hover{
-      color:var(--text);
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: color 0.22s ease;
     }
 
-    .nav-cta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:46px;
-      padding:0 18px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:700;
-      color:var(--gold-2);
-      border:1px solid rgba(216,170,73,.34);
-      background:rgba(216,170,73,.08);
-      transition:transform .22s ease, box-shadow .22s ease, background .22s ease;
-      box-shadow:0 8px 18px rgba(0,0,0,.14);
-      white-space:nowrap;
+    .nav-links a:hover {
+      color: var(--text);
     }
 
-    .nav-cta:hover{
-      transform:translateY(-1px);
-      background:rgba(216,170,73,.12);
-      box-shadow:0 12px 24px rgba(0,0,0,.20);
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--gold-2);
+      border: 1px solid rgba(214,170,71,0.34);
+      background: rgba(214,170,71,0.08);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.14);
+      white-space: nowrap;
     }
 
-    .menu-toggle{
-      display:none;
-      width:46px;
-      height:46px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.08);
-      background:rgba(255,255,255,.03);
-      color:var(--text);
-      cursor:pointer;
-      align-items:center;
-      justify-content:center;
-      flex-direction:column;
-      gap:5px;
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      background: rgba(214,170,71,0.12);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
 
-    .menu-toggle span{
-      display:block;
-      width:18px;
-      height:2px;
-      background:var(--text);
-      border-radius:999px;
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      padding: 0;
     }
 
-    .mobile-drawer{
-      display:none;
-      border-top:1px solid rgba(255,255,255,.06);
-      padding:12px 0 18px;
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--text);
     }
 
-    .mobile-drawer.open{
-      display:block;
+    .mobile-drawer {
+      display: none;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 12px 0 18px;
     }
 
-    .mobile-links{
-      display:grid;
-      gap:10px;
+    .mobile-drawer.open {
+      display: block;
     }
 
-    .mobile-links a{
-      text-decoration:none;
-      color:var(--muted);
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.07);
-      border-radius:14px;
-      padding:14px 16px;
+    .mobile-links {
+      display: grid;
+      gap: 10px;
     }
 
-    .mobile-links a.mobile-cta{
-      color:#231707;
-      background:linear-gradient(135deg, var(--gold-2), var(--gold));
-      font-weight:800;
-      border-color:transparent;
+    .mobile-links a {
+      text-decoration: none;
+      color: var(--muted);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px;
+      padding: 14px 16px;
     }
 
-    .hero{
-      padding:44px 0 38px;
-      min-height:calc(100vh - var(--nav-height));
-      display:grid;
-      grid-template-columns:1.08fr .92fr;
-      gap:34px;
-      align-items:center;
+    .mobile-links a.mobile-cta {
+      color: #241707;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      border-color: transparent;
+      font-weight: 800;
     }
 
-    .hero-copy{
-      opacity:0;
-      transform:translateY(18px);
-      animation:riseIn .9s ease forwards;
+    .hero {
+      min-height: calc(100vh - var(--nav-h));
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: center;
+      padding: 44px 0 38px;
     }
 
-    .hero h1{
-      margin:0;
-      font-family:Georgia, "Times New Roman", serif;
-      font-size:clamp(3.6rem, 7vw, 6.3rem);
-      line-height:.92;
-      letter-spacing:-.05em;
-      text-wrap:balance;
+    .hero-copy {
+      opacity: 0;
+      transform: translateY(18px);
+      animation: riseIn 0.9s ease forwards;
     }
 
-    .hero-lead{
-      margin-top:22px;
-      max-width:720px;
-      font-size:clamp(1.07rem,1.45vw,1.23rem);
-      line-height:1.82;
-      color:var(--muted);
+    .hero h1 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.6rem, 7vw, 6.4rem);
+      line-height: 0.92;
+      letter-spacing: -0.05em;
+      text-wrap: balance;
     }
 
-    .hero-lead + .hero-lead{
-      margin-top:18px;
+    .hero-lead {
+      margin-top: 22px;
+      max-width: 720px;
+      font-size: clamp(1.06rem, 1.45vw, 1.23rem);
+      line-height: 1.82;
+      color: var(--muted);
     }
 
-    .micro-points{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      list-style:none;
-      margin:28px 0 0;
-      padding:0;
+    .hero-lead + .hero-lead {
+      margin-top: 18px;
     }
 
-    .micro-points li{
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      color:#e8dece;
-      font-size:.92rem;
+    .micro-points {
+      list-style: none;
+      margin: 28px 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .hero-note{
-      margin-top:18px;
-      max-width:700px;
-      color:rgba(255,255,255,.56);
-      font-size:.90rem;
-      line-height:1.74;
+    .micro-points li {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: #e8dece;
+      font-size: 0.92rem;
     }
 
-    .hero-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-top:28px;
-      align-items:center;
+    .hero-note {
+      margin-top: 18px;
+      max-width: 700px;
+      color: rgba(255,255,255,0.56);
+      font-size: 0.9rem;
+      line-height: 1.74;
     }
 
-    .btn{
-      appearance:none;
-      border:0;
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:54px;
-      padding:0 24px;
-      border-radius:999px;
-      font-weight:800;
-      font-size:1rem;
-      cursor:pointer;
-      transition:transform .24s ease, box-shadow .24s ease, background .24s ease, border-color .24s ease;
-      white-space:nowrap;
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+      align-items: center;
     }
 
-    .btn:hover{
-      transform:translateY(-1px);
+    .btn {
+      appearance: none;
+      border: 0;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 1rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition:
+        transform 0.24s ease,
+        box-shadow 0.24s ease,
+        background 0.24s ease,
+        border-color 0.24s ease;
     }
 
-    .btn-primary{
-      color:#241707;
-      background:linear-gradient(135deg, var(--gold-2), var(--gold));
-      box-shadow:0 16px 34px rgba(216,170,73,.22);
+    .btn:hover {
+      transform: translateY(-1px);
     }
 
-    .btn-secondary{
-      color:var(--text);
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.14);
+    .btn-primary {
+      color: #241707;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      box-shadow: 0 16px 34px rgba(214,170,71,0.22);
     }
 
-    .hero-visual{
-      position:relative;
-      min-height:660px;
-      opacity:0;
-      transform:translateY(20px);
-      animation:riseIn 1s ease .12s forwards;
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.14);
     }
 
-    .visual-frame{
-      position:absolute;
-      inset:28px 0 0 34px;
-      border-radius:30px;
-      overflow:hidden;
+    .hero-visual {
+      position: relative;
+      min-height: 660px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: riseIn 1s ease 0.12s forwards;
+    }
+
+    .visual-frame {
+      position: absolute;
+      inset: 28px 0 0 34px;
+      border-radius: 30px;
+      overflow: hidden;
       background:
-        radial-gradient(circle at 22% 18%, rgba(216,170,73,.14), transparent 24%),
-        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.10);
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(8px);
+        radial-gradient(circle at 22% 18%, rgba(214,170,71,0.14), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
     }
 
-    .visual-frame::before{
-      content:"";
-      position:absolute;
-      inset:0;
+    .visual-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
       background:
-        linear-gradient(to left, rgba(8,8,8,.02), rgba(8,8,8,.52) 65%, rgba(8,8,8,.92) 100%),
-        linear-gradient(to top, rgba(8,8,8,.12), rgba(8,8,8,0) 30%);
-      z-index:2;
-      pointer-events:none;
+        linear-gradient(to left, rgba(8,8,8,0.02), rgba(8,8,8,0.52) 65%, rgba(8,8,8,0.9) 100%),
+        linear-gradient(to top, rgba(8,8,8,0.12), rgba(8,8,8,0) 30%);
+      z-index: 2;
+      pointer-events: none;
     }
 
-    .portrait{
-      position:absolute;
-      right:24px;
-      bottom:0;
-      width:min(100%, 344px);
-      max-height:92%;
-      object-fit:cover;
-      object-position:center top;
-      border-radius:24px 24px 0 0;
-      filter:contrast(1.02) saturate(1.03) drop-shadow(0 18px 36px rgba(0,0,0,.34));
-      z-index:1;
+    .portrait {
+      position: absolute;
+      right: 24px;
+      bottom: 0;
+      width: min(100%, 344px);
+      max-height: 92%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 24px 24px 0 0;
+      filter: contrast(1.02) saturate(1.03) drop-shadow(0 18px 36px rgba(0,0,0,0.34));
+      z-index: 1;
     }
 
-    .portrait-card{
-      position:absolute;
-      top:28px;
-      left:28px;
-      width:min(72%, 340px);
-      padding:22px 20px;
-      border-radius:20px;
-      background:rgba(9,9,9,.58);
-      border:1px solid rgba(255,255,255,.10);
-      backdrop-filter:blur(10px);
-      z-index:3;
-      box-shadow:0 14px 30px rgba(0,0,0,.28);
+    .portrait-card {
+      position: absolute;
+      top: 28px;
+      left: 28px;
+      width: min(72%, 340px);
+      padding: 22px 20px;
+      border-radius: 20px;
+      background: rgba(9,9,9,0.58);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(10px);
+      z-index: 3;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.28);
     }
 
-    .portrait-card h3{
-      margin:0 0 10px;
-      font-size:1rem;
-      color:var(--text);
+    .portrait-card h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      color: var(--text);
     }
 
-    .portrait-card p{
-      margin:0;
-      font-size:.95rem;
-      line-height:1.72;
-      color:#d4cabd;
+    .portrait-card p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.72;
+      color: #d4cabd;
     }
 
-    .lead-panel{
-      margin-top:34px;
-      padding:28px;
-      border-radius:26px;
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:var(--shadow);
-      max-width:760px;
+    .lead-panel {
+      margin-top: 34px;
+      padding: 28px;
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      max-width: 760px;
     }
 
-    .lead-panel-header{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:18px;
-      margin-bottom:18px;
+    .lead-panel-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
     }
 
-    .lead-panel-title-wrap{
-      min-width:0;
+    .lead-panel h3 {
+      margin: 0 0 10px;
+      font-size: 1.56rem;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.1;
     }
 
-    .lead-panel h3{
-      margin:0 0 10px;
-      font-size:1.56rem;
-      font-family:Georgia,"Times New Roman",serif;
-      line-height:1.1;
+    .lead-panel p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.78;
     }
 
-    .lead-panel p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.78;
+    .lead-chip {
+      flex-shrink: 0;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(214,170,71,0.10);
+      border: 1px solid rgba(214,170,71,0.18);
+      color: var(--gold-2);
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
     }
 
-    .lead-chip{
-      flex-shrink:0;
-      padding:10px 14px;
-      border-radius:999px;
-      background:rgba(216,170,73,.10);
-      border:1px solid rgba(216,170,73,.18);
-      color:var(--gold-2);
-      font-size:.82rem;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      font-weight:700;
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
     }
 
-    .lead-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-      margin-bottom:14px;
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
-    .field{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-    }
-
-    .field label{
-      font-size:.90rem;
-      color:#e9dfcf;
-      font-weight:600;
+    .field label {
+      font-size: 0.9rem;
+      color: #e9dfcf;
+      font-weight: 600;
     }
 
     .field input,
     .field select,
-    .field textarea{
-      width:100%;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.04);
-      color:var(--text);
-      border-radius:14px;
-      padding:14px 14px;
-      outline:none;
-      transition:border-color .22s ease, background .22s ease, box-shadow .22s ease;
+    .field textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 14px 14px;
+      outline: none;
+      transition: border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
     }
 
     .field input:focus,
     .field select:focus,
-    .field textarea:focus{
-      border-color:rgba(216,170,73,.38);
-      background:rgba(255,255,255,.05);
-      box-shadow:0 0 0 3px rgba(216,170,73,.10);
+    .field textarea:focus {
+      border-color: rgba(214,170,71,0.38);
+      background: rgba(255,255,255,0.05);
+      box-shadow: 0 0 0 3px rgba(214,170,71,0.10);
     }
 
     .field input::placeholder,
-    .field textarea::placeholder{
-      color:#9f9588;
+    .field textarea::placeholder {
+      color: #9f9588;
     }
 
-    .field textarea{
-      min-height:126px;
-      resize:vertical;
+    .field textarea {
+      min-height: 126px;
+      resize: vertical;
     }
 
-    .qualification{
-      margin:10px 0 2px;
-      padding:14px 16px;
-      border-radius:16px;
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.08);
-      color:#e7ddce;
-      font-size:.92rem;
-      line-height:1.68;
+    .qualification {
+      margin: 10px 0 2px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #e7ddce;
+      font-size: 0.92rem;
+      line-height: 1.68;
     }
 
-    .lead-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      align-items:center;
-      margin-top:18px;
+    .lead-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-top: 18px;
     }
 
-    .lead-actions .btn{
-      min-width:210px;
+    .lead-actions .btn {
+      min-width: 210px;
     }
 
-    .tiny-note{
-      color:rgba(255,255,255,.52);
-      font-size:.83rem;
-      line-height:1.66;
-      margin-top:10px;
+    .tiny-note {
+      color: rgba(255,255,255,0.52);
+      font-size: 0.83rem;
+      line-height: 1.66;
+      margin-top: 10px;
     }
 
-    .form-status{
-      display:none;
-      margin-top:16px;
-      padding:14px 16px;
-      border-radius:16px;
-      font-size:.92rem;
-      line-height:1.65;
-      border:1px solid transparent;
+    .form-status {
+      display: none;
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      border: 1px solid transparent;
     }
 
-    .form-status.show{
-      display:block;
+    .form-status.show {
+      display: block;
     }
 
-    .form-status.success{
-      background:rgba(79,179,120,.10);
-      border-color:rgba(79,179,120,.18);
-      color:#d6f1e0;
+    .form-status.success {
+      background: rgba(79,179,120,0.10);
+      border-color: rgba(79,179,120,0.18);
+      color: #d6f1e0;
     }
 
-    .form-status.error{
-      background:rgba(207,75,75,.10);
-      border-color:rgba(207,75,75,.18);
-      color:#ffd6d6;
+    .form-status.error {
+      background: rgba(207,75,75,0.10);
+      border-color: rgba(207,75,75,0.18);
+      color: #ffd6d6;
     }
 
-    .section-head{
-      margin-bottom:30px;
+    .section-head {
+      margin-bottom: 30px;
     }
 
-    .section-head h2{
-      margin:0 0 12px;
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(2rem,3vw,3rem);
-      line-height:1.05;
-      text-wrap:balance;
+    .section-head.center {
+      text-align: center;
     }
 
-    .section-head p{
-      margin:0;
-      color:var(--muted);
-      font-size:1.03rem;
-      line-height:1.82;
-      max-width:780px;
+    .section-head h2 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.05;
+      text-wrap: balance;
     }
 
-    .center{
-      text-align:center;
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.03rem;
+      line-height: 1.82;
+      max-width: 780px;
     }
 
-    .max-760{
-      max-width:760px;
-      margin-left:auto;
-      margin-right:auto;
+    .section-head.center p {
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .trio{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:18px;
-      margin-bottom:24px;
+    .trio {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 24px;
     }
 
-    .card{
-      padding:28px;
-      border-radius:24px;
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:var(--shadow);
+    .card {
+      padding: 28px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      min-height: 100%;
     }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: rgba(214,170,71,0.12);
+      color: var(--gold-2);
+      border: 1px solid rgba(214,170,71,0.24);
+      margin-bottom: 18px;
+      font-size: 1.12rem;
+      font-weight: 800;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.2;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.76;
+    }
 
-    .icon{
-      width:44px;
-      height:44px;
-      display:grid;
-      place-items:center;
-      border-radius:14px;
-      background:rgba(216,170,73,.12);
-      color:var(--gold-2);
-      border:1px solid rgba(216,170,73,.24);
-      margin-bottom:18px;
-      font-size:1.12rem;
-      font-weight:800;
+    .feature-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .feature-pill {
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow-soft);
+      min-height: 100%;
     }
 
-    .card h3{
-      margin:0 0 10px;
-      font-size:1.18rem;
-      line-height:1.2;
+    .feature-pill strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 6px;
     }
-
-    .card p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.76;
+
+    .feature-pill span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.66;
     }
 
-    .split{
-      display:grid;
-      grid-template-columns:1.06fr .94fr;
-      gap:22px;
-      margin-top:22px;
-      margin-bottom:22px;
+    .split {
+      display: grid;
+      grid-template-columns: 1.06fr 0.94fr;
+      gap: 22px;
+      margin-top: 22px;
+      margin-bottom: 22px;
     }
 
-    .panel{
-      padding:34px;
-      border-radius:28px;
-      background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.09);
-      box-shadow:var(--shadow);
+    .panel {
+      padding: 34px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.09);
+      box-shadow: var(--shadow);
     }
 
-    .panel h2{
-      margin:0 0 12px;
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(2rem,3vw,3rem);
-      line-height:1.04;
-      text-wrap:balance;
+    .panel h2 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.04;
+      text-wrap: balance;
     }
 
-    .panel .sub{
-      color:var(--muted);
-      font-size:1.04rem;
-      line-height:1.82;
-      margin-bottom:24px;
-      max-width:760px;
+    .panel .sub {
+      color: var(--muted);
+      font-size: 1.04rem;
+      line-height: 1.82;
+      margin-bottom: 24px;
+      max-width: 760px;
     }
 
-    .steps{
-      display:grid;
-      gap:14px;
+    .steps {
+      display: grid;
+      gap: 14px;
     }
 
-    .step{
-      display:grid;
-      grid-template-columns:56px 1fr;
-      gap:16px;
-      align-items:start;
-      padding:16px 14px;
-      border-radius:18px;
-      background:rgba(255,255,255,.035);
-      border:1px solid rgba(255,255,255,.08);
+    .step {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 16px 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
-    .step-num{
-      width:42px;
-      height:42px;
-      display:grid;
-      place-items:center;
-      border-radius:50%;
-      background:linear-gradient(135deg, var(--gold-2), var(--gold));
-      color:#241707;
-      font-weight:800;
-      box-shadow:0 10px 24px rgba(216,170,73,.18);
+    .step-num {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      color: #241707;
+      font-weight: 800;
+      box-shadow: 0 10px 24px rgba(214,170,71,0.18);
     }
 
-    .step h4{
-      margin:2px 0 6px;
-      font-size:1.06rem;
+    .step h4 {
+      margin: 2px 0 6px;
+      font-size: 1.06rem;
     }
 
-    .step p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.68;
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.68;
     }
 
-    .checklist{
-      list-style:none;
-      margin:20px 0 0;
-      padding:0;
-      display:grid;
-      gap:12px;
+    .checklist {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .checklist li{
-      position:relative;
-      padding-left:26px;
-      color:#ece3d5;
-      line-height:1.72;
+    .checklist li {
+      position: relative;
+      padding-left: 26px;
+      color: #ece3d5;
+      line-height: 1.72;
     }
 
-    .checklist li::before{
-      content:"✓";
-      position:absolute;
-      left:0;
-      top:0;
-      color:var(--gold);
-      font-weight:800;
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+      font-weight: 800;
     }
 
-    .who-not{
-      margin-top:24px;
-      padding:18px 18px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.08);
-      background:rgba(255,255,255,.03);
+    .who-not {
+      margin-top: 24px;
+      padding: 18px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
     }
 
-    .who-not h4{
-      margin:0 0 10px;
-      font-size:1rem;
-      color:#f0e6d8;
+    .who-not h4 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      color: #f0e6d8;
     }
 
-    .who-not p{
-      margin:0;
-      color:var(--soft);
-      line-height:1.72;
-      font-size:.96rem;
+    .who-not p {
+      margin: 0;
+      color: var(--soft);
+      line-height: 1.72;
+      font-size: 0.96rem;
     }
 
-    .feature-strip{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:16px;
-      margin-top:26px;
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 26px;
     }
 
-    .feature-pill{
-      padding:16px 18px;
-      border-radius:20px;
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:var(--shadow-soft);
+    .process-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      min-height: 100%;
     }
 
-    .feature-pill strong{
-      display:block;
-      font-size:1rem;
-      margin-bottom:6px;
+    .process-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
     }
 
-    .feature-pill span{
-      display:block;
-      color:var(--muted);
-      font-size:.93rem;
-      line-height:1.66;
+    .process-number {
+      font-size: 2rem;
+      font-weight: 900;
+      color: rgba(240,210,143,0.22);
+      line-height: 1;
     }
 
-    .process-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-      margin-top:26px;
+    .process-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.06rem;
     }
 
-    .process-card{
-      padding:24px;
-      border-radius:24px;
-      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:var(--shadow);
+    .process-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.72;
+      font-size: 0.96rem;
     }
 
-    .process-top{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      margin-bottom:14px;
+    .guide-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 22px;
+      margin-top: 24px;
     }
 
-    .process-number{
-      font-size:2rem;
-      font-weight:900;
-      color:rgba(240,210,143,.22);
-      line-height:1;
-    }
-
-    .process-card h3{
-      margin:0 0 10px;
-      font-size:1.06rem;
-    }
-
-    .process-card p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.72;
-      font-size:.96rem;
-    }
-
-    .pricing{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-      margin-top:24px;
-    }
-
-    .price-card{
-      display:flex;
-      flex-direction:column;
-      padding:28px;
-      border-radius:24px;
-      border:1px solid rgba(255,255,255,.09);
-      background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025));
-      box-shadow:var(--shadow);
-      min-height:100%;
-    }
-
-    .price-card.featured{
-      background:linear-gradient(180deg, rgba(216,170,73,.18), rgba(255,255,255,.04));
-      border-color:rgba(216,170,73,.28);
-      transform:translateY(-4px);
-    }
-
-    .label{
-      color:var(--gold-2);
-      font-size:.82rem;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      margin-bottom:10px;
-      font-weight:700;
-    }
-
-    .price{
-      font-size:2.2rem;
-      font-weight:800;
-      margin-bottom:8px;
-      line-height:1;
-    }
-
-    .price-title{
-      font-size:1.18rem;
-      font-weight:700;
-      margin-bottom:10px;
-    }
-
-    .price-card p{
-      margin:0 0 14px;
-      color:var(--muted);
-      line-height:1.72;
-    }
-
-    .price-features{
-      list-style:none;
-      padding:0;
-      margin:4px 0 22px;
-      display:grid;
-      gap:10px;
-    }
-
-    .price-features li{
-      position:relative;
-      padding-left:24px;
-      color:#efe6d8;
-      line-height:1.68;
-      font-size:.95rem;
-    }
-
-    .price-features li::before{
-      content:"•";
-      position:absolute;
-      left:8px;
-      color:var(--gold);
-      font-weight:800;
-    }
-
-    .price-actions{
-      margin-top:auto;
-      display:grid;
-      gap:10px;
-    }
-
-    .btn-inline{
-      min-height:48px;
-      padding:0 18px;
-      border-radius:14px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      text-decoration:none;
-      font-weight:800;
-    }
-
-    .btn-gold{
-      background:linear-gradient(135deg, var(--gold-2), var(--gold));
-      color:#231707;
-    }
-
-    .btn-ghost{
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.04);
-      color:var(--text);
-    }
-
-    .testimonial-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:18px;
-      margin-top:24px;
-    }
-
-    .testimonial{
-      padding:28px;
-      border-radius:24px;
-      background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025));
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:var(--shadow);
-    }
-
-    .quote-mark{
-      font-size:2.2rem;
-      color:rgba(240,210,143,.34);
-      line-height:1;
-      margin-bottom:8px;
-      font-family:Georgia,"Times New Roman",serif;
-    }
-
-    .testimonial p{
-      margin:0 0 18px;
-      color:var(--muted);
-      line-height:1.8;
-    }
-
-    .testimonial strong{
-      display:block;
-      font-size:1rem;
-      margin-bottom:4px;
-    }
-
-    .testimonial span{
-      display:block;
-      color:rgba(255,255,255,.52);
-      font-size:.90rem;
-    }
-
-    .faq{
-      display:grid;
-      gap:14px;
-      margin-top:22px;
-    }
-
-    .faq-item{
-      border-radius:20px;
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:var(--shadow-soft);
-      overflow:hidden;
-    }
-
-    .faq-question{
-      width:100%;
-      text-align:left;
-      border:0;
-      background:transparent;
-      color:var(--text);
-      padding:20px 22px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      font-weight:700;
-      cursor:pointer;
-    }
-
-    .faq-question span:last-child{
-      color:var(--gold-2);
-      font-size:1.2rem;
-      line-height:1;
-      flex-shrink:0;
-    }
-
-    .faq-answer{
-      display:none;
-      padding:0 22px 20px;
-      color:var(--muted);
-      line-height:1.78;
-    }
-
-    .faq-item.open .faq-answer{
-      display:block;
-    }
-
-    .final-cta{
-      margin-top:28px;
-      padding:40px 24px;
-      border-radius:30px;
-      text-align:center;
+    .guide-preview {
+      padding: 28px;
+      border-radius: 26px;
       background:
-        radial-gradient(circle at top center, rgba(216,170,73,.18), transparent 34%),
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:var(--shadow);
+        radial-gradient(circle at top center, rgba(214,170,71,0.15), transparent 35%),
+        linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
     }
 
-    .final-cta h2{
-      margin:0 0 12px;
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(2.05rem,4vw,3.4rem);
-      line-height:1.05;
+    .guide-preview .guide-kicker {
+      color: var(--gold-2);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
-    .final-cta p{
-      max-width:760px;
-      margin:0 auto 24px;
-      color:var(--muted);
-      line-height:1.8;
-      font-size:1.02rem;
+    .guide-preview h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.9rem, 3vw, 2.7rem);
+      line-height: 1.08;
     }
 
-    .contact-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:22px;
-      margin-top:26px;
+    .guide-preview p {
+      margin: 18px auto 0;
+      max-width: 420px;
+      color: var(--muted);
+      line-height: 1.78;
     }
 
-    .contact-card{
-      padding:28px;
-      border-radius:24px;
-      background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025));
-      border:1px solid rgba(255,255,255,.08);
-      box-shadow:var(--shadow);
+    .guide-outline {
+      padding: 28px;
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
     }
 
-    .contact-card h3{
-      margin:0 0 10px;
-      font-size:1.16rem;
+    .guide-outline h3 {
+      margin: 0 0 16px;
+      font-size: 1.24rem;
     }
 
-    .contact-card p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.78;
+    .guide-pages {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
     }
 
-    .contact-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:18px;
+    .guide-pages li {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      padding: 14px 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      align-items: start;
     }
 
-    footer{
-      border-top:1px solid rgba(255,255,255,.06);
-      margin-top:20px;
+    .guide-pages strong {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(214,170,71,0.12);
+      border: 1px solid rgba(214,170,71,0.22);
+      color: var(--gold-2);
+      font-size: 0.88rem;
     }
 
-    .footer-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:32px 0 60px;
-      color:rgba(255,255,255,.50);
-      font-size:.92rem;
+    .guide-pages span {
+      color: var(--muted);
+      line-height: 1.66;
+      display: block;
     }
 
-    .footer-brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
     }
 
-    .footer-brand img{
-      width:18px;
-      height:18px;
-      object-fit:contain;
+    .price-card {
+      display: flex;
+      flex-direction: column;
+      padding: 28px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.09);
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+      box-shadow: var(--shadow);
+      min-height: 100%;
     }
 
-    .footer-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
+    .price-card.featured {
+      background: linear-gradient(180deg, rgba(214,170,71,0.18), rgba(255,255,255,0.04));
+      border-color: rgba(214,170,71,0.28);
+      transform: translateY(-4px);
     }
 
-    .footer-links a{
-      text-decoration:none;
-      color:rgba(255,255,255,.50);
+    .label {
+      color: var(--gold-2);
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-weight: 700;
     }
 
-    .footer-links a:hover{
-      color:var(--text);
+    .price {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      line-height: 1;
     }
 
-    .compliance{
-      max-width:920px;
-      margin:28px auto 0;
-      text-align:center;
-      color:rgba(255,255,255,.48);
-      font-size:.82rem;
-      line-height:1.68;
+    .price-title {
+      font-size: 1.18rem;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
-    @keyframes riseIn{
-      to{
-        opacity:1;
-        transform:translateY(0);
+    .price-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.72;
+    }
+
+    .price-features {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 22px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .price-features li {
+      position: relative;
+      padding-left: 24px;
+      color: #efe6d8;
+      line-height: 1.68;
+      font-size: 0.95rem;
+    }
+
+    .price-features li::before {
+      content: "•";
+      position: absolute;
+      left: 8px;
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    .price-actions {
+      margin-top: auto;
+      display: grid;
+      gap: 10px;
+    }
+
+    .btn-inline {
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      color: #231707;
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .faq-item {
+      border-radius: 20px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      border: 0;
+      background: transparent;
+      color: var(--text);
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .faq-question span:last-child {
+      color: var(--gold-2);
+      font-size: 1.2rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 22px 20px;
+      color: var(--muted);
+      line-height: 1.78;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .final-cta {
+      margin-top: 28px;
+      padding: 40px 24px;
+      border-radius: 30px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top center, rgba(214,170,71,0.18), transparent 34%),
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta h2 {
+      margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.05rem, 4vw, 3.4rem);
+      line-height: 1.05;
+    }
+
+    .final-cta p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1.02rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 26px;
+    }
+
+    .contact-card {
+      padding: 28px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      min-height: 100%;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.16rem;
+    }
+
+    .contact-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.78;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .compliance {
+      max-width: 920px;
+      margin: 28px auto 0;
+      text-align: center;
+      color: rgba(255,255,255,0.48);
+      font-size: 0.82rem;
+      line-height: 1.68;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin-top: 20px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 32px 0 60px;
+      color: rgba(255,255,255,0.50);
+      font-size: 0.92rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-brand img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.50);
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    @keyframes riseIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
-    @media (max-width:1160px){
+    @media (max-width: 1160px) {
       .hero,
       .trio,
       .split,
       .pricing,
-      .testimonial-grid,
       .feature-strip,
       .process-grid,
-      .contact-grid{
-        grid-template-columns:1fr;
+      .guide-layout,
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
 
-      .hero{
-        min-height:auto;
+      .hero {
+        min-height: auto;
       }
 
-      .hero-visual{
-        min-height:520px;
-        order:-1;
+      .hero-visual {
+        min-height: 520px;
+        order: -1;
       }
 
-      .visual-frame{
-        inset:0;
+      .visual-frame {
+        inset: 0;
       }
 
-      .portrait{
-        width:min(72%,320px);
-        right:14px;
+      .portrait {
+        width: min(72%, 320px);
+        right: 14px;
       }
     }
 
-    @media (max-width:920px){
+    @media (max-width: 920px) {
       .nav-links,
-      .nav-cta{
-        display:none;
+      .nav-cta {
+        display: none;
       }
 
-      .menu-toggle{
-        display:flex;
+      .menu-toggle {
+        display: flex;
       }
 
-      .hero{
-        padding-top:28px;
+      .hero {
+        padding-top: 28px;
       }
 
-      .lead-grid{
-        grid-template-columns:1fr;
+      .lead-grid {
+        grid-template-columns: 1fr;
       }
 
-      .lead-panel-header{
-        flex-direction:column;
-        align-items:flex-start;
+      .lead-panel-header {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .footer-inner{
-        flex-direction:column;
-        align-items:flex-start;
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
 
-    @media (max-width:720px){
-      .container{
-        width:min(var(--max), calc(100% - 28px));
+    @media (max-width: 720px) {
+      .container {
+        width: min(var(--max), calc(100% - 28px));
       }
 
-      .hero,
-      .section-stack{
-        padding-left:0;
-        padding-right:0;
+      .hero-visual {
+        min-height: 420px;
       }
 
-      .hero-visual{
-        min-height:420px;
+      .portrait {
+        width: min(76%, 250px);
+        right: 10px;
       }
 
-      .portrait{
-        width:min(76%,250px);
-        right:10px;
-      }
-
-      .portrait-card{
-        left:14px;
-        top:14px;
-        width:calc(100% - 110px);
-        padding:16px;
+      .portrait-card {
+        left: 14px;
+        top: 14px;
+        width: calc(100% - 110px);
+        padding: 16px;
       }
 
       .panel,
@@ -1377,45 +1446,46 @@
       .price-card,
       .final-cta,
       .lead-panel,
-      .testimonial,
       .contact-card,
-      .process-card{
-        padding:22px;
+      .process-card,
+      .guide-preview,
+      .guide-outline {
+        padding: 22px;
       }
 
       .hero-actions,
       .lead-actions,
-      .contact-actions{
-        flex-direction:column;
-        align-items:stretch;
+      .contact-actions {
+        flex-direction: column;
+        align-items: stretch;
       }
 
       .btn,
       .lead-actions .btn,
-      .btn-inline{
-        width:100%;
+      .btn-inline {
+        width: 100%;
       }
 
-      .brand-sub{
-        display:none;
+      .brand-subtitle {
+        display: none;
       }
     }
 
-    @media (max-width:520px){
-      .brand-name{
-        font-size:.95rem;
+    @media (max-width: 520px) {
+      .brand-title {
+        font-size: 0.95rem;
       }
 
-      .hero h1{
-        font-size:clamp(3rem, 13vw, 4.2rem);
+      .hero h1 {
+        font-size: clamp(3rem, 13vw, 4.2rem);
       }
 
-      .micro-points{
-        gap:10px;
+      .micro-points {
+        gap: 10px;
       }
 
-      .micro-points li{
-        font-size:.88rem;
+      .micro-points li {
+        font-size: 0.88rem;
       }
     }
   </style>
@@ -1425,22 +1495,21 @@
   <div class="glow two"></div>
   <div class="glow three"></div>
 
-  <div class="wrap">
+  <div class="page-wrap">
     <header class="site-header">
       <div class="container">
         <nav class="nav" aria-label="Primary">
-          <a href="#top" class="brand">
-            <span class="brand-logo-wrap">
+          <a href="#top" class="brand-link">
+            <span class="brand-mark">
               <img
                 src="ChatGPT Image Mar 21, 2026, 09_23_41 AM.png"
                 alt="Spotlight Success logo"
-                class="brand-logo"
               />
             </span>
 
-            <span class="brand-copy">
-              <span class="brand-name">Spotlight Success</span>
-              <span class="brand-sub">Coaching &amp; Training</span>
+            <span class="brand-text">
+              <span class="brand-title">Spotlight Success</span>
+              <span class="brand-subtitle">Coaching &amp; Training</span>
             </span>
           </a>
 
@@ -1448,7 +1517,7 @@
             <div class="nav-links">
               <a href="#system">The System</a>
               <a href="#approach">Approach</a>
-              <a href="#coaching">Coaching</a>
+              <a href="#guide">Free Guide</a>
               <a href="#pricing">Pricing</a>
               <a href="#faq">FAQ</a>
             </div>
@@ -1456,7 +1525,13 @@
             <a class="nav-cta" href="#connect">Get Started</a>
           </div>
 
-          <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileDrawer"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -1467,7 +1542,7 @@
           <div class="mobile-links">
             <a href="#system">The System</a>
             <a href="#approach">Approach</a>
-            <a href="#coaching">Coaching</a>
+            <a href="#guide">Free Guide</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
             <a href="#connect" class="mobile-cta">Get Started</a>
@@ -1479,7 +1554,7 @@
     <main id="top">
       <section class="container hero">
         <div class="hero-copy">
-          <div class="eyebrow">Coaching and Training Brand</div>
+          <div class="eyebrow">Coaching and Training</div>
 
           <h1>
             Spotlight<br />
@@ -1487,11 +1562,13 @@
           </h1>
 
           <p class="hero-lead">
-            Strategic guidance for individuals serious about building a professional path in commercials, print, acting, and production.
+            Strategic guidance for people serious about building a professional path in
+            commercials, print, acting, and production.
           </p>
 
           <p class="hero-lead">
-            Designed for those who want clearer direction, stronger positioning, and a more disciplined approach to navigating the entertainment industry.
+            Designed for those who want clearer direction, stronger positioning, and a
+            more disciplined approach to navigating the entertainment industry.
           </p>
 
           <ul class="micro-points">
@@ -1503,20 +1580,29 @@
           </ul>
 
           <div class="hero-note">
-            This is intended for individuals ready to approach the industry with focus, professionalism, and a more structured mindset.
+            This is built for individuals ready to approach the industry with focus,
+            professionalism, and a more structured mindset.
           </div>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#connect">Start Here</a>
-            <a class="btn btn-secondary" href="#pricing">View Options</a>
+            <a
+              class="btn btn-secondary"
+              href="/Spotlight_Success_Cinematic_Guide_v2.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Free Guide
+            </a>
           </div>
 
           <div id="connect" class="lead-panel">
             <div class="lead-panel-header">
-              <div class="lead-panel-title-wrap">
+              <div>
                 <h3>Spotlight Success Intake</h3>
                 <p>
-                  Share a few details below and your request will be reviewed with the most appropriate next steps.
+                  Share a few details below and your request will be reviewed with the
+                  most appropriate next steps.
                 </p>
               </div>
 
@@ -1527,12 +1613,24 @@
               <div class="lead-grid">
                 <div class="field">
                   <label for="name">Full Name</label>
-                  <input id="name" name="name" type="text" placeholder="Your name" required />
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                    required
+                  />
                 </div>
 
                 <div class="field">
                   <label for="email">Email Address</label>
-                  <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                  />
                 </div>
 
                 <div class="field">
@@ -1570,12 +1668,21 @@
               </div>
 
               <div class="qualification">
-                This brand is built for people looking for clarity, structure, and a more professional approach. Not every request will be the right fit, and that is intentional.
+                This is designed for people looking for clarity, structure, and a more
+                professional approach. Not every request will be the right fit, and that
+                is intentional.
               </div>
 
               <div class="lead-actions">
                 <button type="submit" class="btn btn-primary">Submit Request</button>
-                <a class="btn btn-secondary" href="https://bit.ly/GetSpotlightNow" target="_blank" rel="noopener noreferrer">Download Free Guide</a>
+                <a
+                  class="btn btn-secondary"
+                  href="/Spotlight_Success_Cinematic_Guide_v2.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download Free Guide
+                </a>
               </div>
 
               <div class="tiny-note">
@@ -1592,7 +1699,8 @@
             <div class="portrait-card">
               <h3>Professional Guidance</h3>
               <p>
-                Built to help individuals think more clearly, present themselves more professionally, and move through the industry with greater precision.
+                Built to help people think more clearly, present themselves more
+                professionally, and move through the industry with greater precision.
               </p>
             </div>
 
@@ -1601,13 +1709,14 @@
         </div>
       </section>
 
-      <section class="container section-stack">
+      <section class="container section">
         <div class="trio reveal">
           <div class="card">
             <div class="icon">✦</div>
             <h3>Get Clear</h3>
             <p>
-              Understand what matters first so your effort goes into the right moves instead of scattered activity.
+              Understand what matters first so your effort goes into the right moves
+              instead of scattered activity.
             </p>
           </div>
 
@@ -1615,7 +1724,8 @@
             <div class="icon">✦</div>
             <h3>Look More Professional</h3>
             <p>
-              Sharpen how you present yourself so preventable mistakes do not undercut your opportunities.
+              Sharpen how you present yourself so preventable mistakes do not undercut
+              your opportunities.
             </p>
           </div>
 
@@ -1623,7 +1733,8 @@
             <div class="icon">✦</div>
             <h3>Move Smarter</h3>
             <p>
-              Learn how to approach the industry with more structure, more discipline, and less wasted motion.
+              Learn how to approach the industry with more structure, more discipline,
+              and less wasted motion.
             </p>
           </div>
         </div>
@@ -1651,14 +1762,15 @@
         </div>
       </section>
 
-      <section id="system" class="container section-stack">
+      <section id="system" class="container section">
         <div class="split reveal">
           <div class="panel">
             <div class="section-head">
               <div class="eyebrow">Framework</div>
               <h2>The Spotlight Success System</h2>
               <p>
-                A structured framework focused on clarity, positioning, and long-term thinking rather than shortcuts, noise, or constant guesswork.
+                A structured framework focused on clarity, positioning, and long-term
+                thinking rather than shortcuts, noise, or guesswork.
               </p>
             </div>
 
@@ -1668,7 +1780,8 @@
                 <div>
                   <h4>Foundation</h4>
                   <p>
-                    Build a stronger base so your materials, direction, and next moves all support each other.
+                    Build a stronger base so your materials, direction, and next moves
+                    all support each other.
                   </p>
                 </div>
               </div>
@@ -1678,7 +1791,8 @@
                 <div>
                   <h4>Commercial Strategy</h4>
                   <p>
-                    Understand where you may fit and how to approach that area with more intention and professionalism.
+                    Understand where you may fit and how to approach that area with more
+                    intention and professionalism.
                   </p>
                 </div>
               </div>
@@ -1688,7 +1802,8 @@
                 <div>
                   <h4>Print Positioning</h4>
                   <p>
-                    See how your look, presentation, and branding may support a stronger overall path.
+                    See how your look, presentation, and overall direction may support a
+                    stronger path.
                   </p>
                 </div>
               </div>
@@ -1698,7 +1813,8 @@
                 <div>
                   <h4>Acting Direction</h4>
                   <p>
-                    Get more precise about how you are presenting yourself and where your effort is actually going.
+                    Get more precise about how you are presenting yourself and where
+                    your effort is actually going.
                   </p>
                 </div>
               </div>
@@ -1708,7 +1824,8 @@
                 <div>
                   <h4>Production Awareness</h4>
                   <p>
-                    Gain a broader understanding of the business so your decisions are made from a stronger vantage point.
+                    Gain a broader understanding of the business so your decisions are
+                    made from a stronger vantage point.
                   </p>
                 </div>
               </div>
@@ -1720,7 +1837,9 @@
               <div class="eyebrow">Structure</div>
               <h2>Business Structure Guidance</h2>
               <p>
-                For those who want to operate more professionally, guidance can also include basic business structure awareness, including entity formation steps and EIN setup.
+                For those who want to operate more professionally, guidance can also
+                include basic business structure awareness, including entity formation
+                steps and EIN setup.
               </p>
             </div>
 
@@ -1734,7 +1853,8 @@
             <div class="who-not">
               <h4>Important</h4>
               <p>
-                This is educational guidance only. Any legal, tax, accounting, or entity decisions should be confirmed with the appropriate qualified professionals.
+                This is educational guidance only. Any legal, tax, accounting, or entity
+                decisions should be confirmed with the appropriate qualified professionals.
               </p>
             </div>
           </div>
@@ -1770,7 +1890,8 @@
             </div>
             <h3>Position</h3>
             <p>
-              Tighten how you present yourself so your image and direction make more sense together.
+              Tighten how you present yourself so your image and direction make more
+              sense together.
             </p>
           </div>
 
@@ -1781,26 +1902,28 @@
             </div>
             <h3>Execute</h3>
             <p>
-              Move forward with better judgment, fewer random decisions, and stronger professional discipline.
+              Move forward with better judgment, fewer random decisions, and stronger
+              professional discipline.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="approach" class="container section-stack">
+      <section id="approach" class="container section">
         <div class="split reveal">
           <div class="panel">
             <div class="section-head">
               <div class="eyebrow">Approach</div>
               <h2>Why This Approach Stands Out</h2>
               <p>
-                This approach is built around clarity, positioning, and long-term thinking, not shortcuts or noise.
+                This approach is built around clarity, positioning, and long-term
+                thinking, not shortcuts, noise, or scattered momentum.
               </p>
             </div>
 
             <ul class="checklist">
               <li>The goal is to help you move with more precision, not just more activity.</li>
-              <li>The emphasis is on stronger decision-making, not random momentum.</li>
+              <li>The emphasis is on stronger decision-making, not random motion.</li>
               <li>The overall focus is professionalism, structure, and better judgment.</li>
               <li>The tone is direct, practical, and built for people who actually want to improve.</li>
             </ul>
@@ -1811,7 +1934,8 @@
               <div class="eyebrow">Fit</div>
               <h2>Who This Is For</h2>
               <p>
-                Spotlight Success is designed for people who want a more serious and better organized approach to building their path.
+                Spotlight Success is designed for people who want a more serious and
+                better organized approach to building their path.
               </p>
             </div>
 
@@ -1825,53 +1949,92 @@
             <div class="who-not">
               <h4>Who this is not for</h4>
               <p>
-                This is not built for people looking for instant shortcuts, casual advice with no follow-through, or an open-ended process without real commitment.
+                This is not designed for people looking for instant shortcuts, casual
+                advice with no follow-through, or an open-ended process without real
+                commitment.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="coaching" class="container section-stack">
-        <div class="panel reveal">
-          <div class="section-head">
-            <div class="eyebrow">Coaching</div>
-            <h2>Coaching Designed for Clarity and Professional Momentum</h2>
+      <section id="guide" class="container section">
+        <div class="section-head center reveal">
+          <div class="eyebrow">Free Guide</div>
+          <h2>The Spotlight Success Starter Guide</h2>
+          <p class="max-760">
+            A clean introductory guide built to reduce confusion, explain the landscape
+            clearly, and help people understand the smartest next step forward.
+          </p>
+        </div>
+
+        <div class="guide-layout reveal">
+          <div class="guide-preview">
+            <div class="guide-kicker">Free Download</div>
+            <h3>
+              Clarity is the difference between movement and momentum.
+            </h3>
             <p>
-              These sessions are built to help you think more clearly, position yourself more professionally, and make stronger decisions about your next steps.
+              This guide is designed to simplify the landscape so people can think more
+              clearly, move more intentionally, and avoid early mistakes that cost time,
+              money, and momentum.
             </p>
+
+            <div class="lead-actions" style="justify-content:center;">
+              <a
+                class="btn btn-primary"
+                href="/Spotlight_Success_Cinematic_Guide_v2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download Free Guide
+              </a>
+            </div>
           </div>
 
-          <div class="trio">
-            <div class="card">
-              <div class="icon">✓</div>
-              <h3>Focused Feedback</h3>
-              <p>
-                Sessions are designed to cut through confusion and bring attention back to what actually matters.
-              </p>
-            </div>
+          <div class="guide-outline">
+            <h3>What’s Inside</h3>
 
-            <div class="card">
-              <div class="icon">✓</div>
-              <h3>Better Positioning</h3>
-              <p>
-                Get cleaner perspective on presentation, professional tone, and the choices that support your direction.
-              </p>
-            </div>
-
-            <div class="card">
-              <div class="icon">✓</div>
-              <h3>Stronger Next Steps</h3>
-              <p>
-                The goal is not just information. The goal is clearer, smarter movement after the session ends.
-              </p>
-            </div>
+            <ul class="guide-pages">
+              <li>
+                <strong>1</strong>
+                <span>Welcome and a cleaner way to think about getting started.</span>
+              </li>
+              <li>
+                <strong>2</strong>
+                <span>The 4 core paths: commercials, print, acting, and production.</span>
+              </li>
+              <li>
+                <strong>3</strong>
+                <span>Common beginner mistakes that waste time, money, and momentum.</span>
+              </li>
+              <li>
+                <strong>4</strong>
+                <span>What professionals tend to do differently.</span>
+              </li>
+              <li>
+                <strong>5</strong>
+                <span>Why positioning matters so much from the beginning.</span>
+              </li>
+              <li>
+                <strong>6</strong>
+                <span>A quick self-assessment to help people gauge where they really are.</span>
+              </li>
+              <li>
+                <strong>7</strong>
+                <span>Simple next steps built around clarity, focus, and intentional action.</span>
+              </li>
+              <li>
+                <strong>8</strong>
+                <span>A clear bridge from information to direct guidance.</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section id="pricing" class="container section-stack">
-        <div class="section-head reveal center">
+      <section id="pricing" class="container section">
+        <div class="section-head center reveal">
           <div class="eyebrow">Pricing</div>
           <h2>Coaching &amp; Training Options</h2>
           <p class="max-760">
@@ -1885,8 +2048,9 @@
             <div class="price">$125</div>
             <div class="price-title">Clarity Call</div>
             <p>
-              A focused introductory session for people who want direction, practical insight,
-              and a clearer understanding of what their smartest next move should be.
+              A focused introductory session for people who want direction, practical
+              insight, and a clearer understanding of what their smartest next move
+              should be.
             </p>
 
             <ul class="price-features">
@@ -1897,8 +2061,22 @@
             </ul>
 
             <div class="price-actions">
-              <a class="btn-inline btn-gold" href="https://buy.stripe.com/14A9ATgV6fg81yscTo9bO07" target="_blank" rel="noopener noreferrer">Book $125 Clarity Call</a>
-              <a class="btn-inline btn-ghost" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">View Calendar</a>
+              <a
+                class="btn-inline btn-gold"
+                href="https://buy.stripe.com/14A9ATgV6fg81yscTo9bO07"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book $125 Clarity Call
+              </a>
+              <a
+                class="btn-inline btn-ghost"
+                href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Calendar
+              </a>
             </div>
           </div>
 
@@ -1907,8 +2085,9 @@
             <div class="price">$295</div>
             <div class="price-title">Strategy Session</div>
             <p>
-              A deeper strategy session for people who want stronger guidance around positioning,
-              presentation, industry direction, and more thoughtful decision-making.
+              A deeper strategy session for people who want stronger guidance around
+              positioning, presentation, industry direction, and more thoughtful
+              decision-making.
             </p>
 
             <ul class="price-features">
@@ -1919,8 +2098,22 @@
             </ul>
 
             <div class="price-actions">
-              <a class="btn-inline btn-gold" href="https://buy.stripe.com/7sY3cv34g5Fycd68D89bO08" target="_blank" rel="noopener noreferrer">Book $295 Strategy Session</a>
-              <a class="btn-inline btn-ghost" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">View Calendar</a>
+              <a
+                class="btn-inline btn-gold"
+                href="https://buy.stripe.com/7sY3cv34g5Fycd68D89bO08"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book $295 Strategy Session
+              </a>
+              <a
+                class="btn-inline btn-ghost"
+                href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Calendar
+              </a>
             </div>
           </div>
 
@@ -1929,8 +2122,8 @@
             <div class="price">$695</div>
             <div class="price-title">Starter Package</div>
             <p>
-              A broader support option for people who want a stronger foundation, more expanded
-              guidance, and a more serious launch point from the beginning.
+              A broader support option for people who want a stronger foundation, more
+              expanded guidance, and a more serious launch point from the beginning.
             </p>
 
             <ul class="price-features">
@@ -1941,8 +2134,22 @@
             </ul>
 
             <div class="price-actions">
-              <a class="btn-inline btn-gold" href="https://buy.stripe.com/eVq00jawI6JCeleaLg9bO09" target="_blank" rel="noopener noreferrer">Book $695 Starter Package</a>
-              <a class="btn-inline btn-ghost" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">View Calendar</a>
+              <a
+                class="btn-inline btn-gold"
+                href="https://buy.stripe.com/eVq00jawI6JCeleaLg9bO09"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book $695 Starter Package
+              </a>
+              <a
+                class="btn-inline btn-ghost"
+                href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Calendar
+              </a>
             </div>
           </div>
         </div>
@@ -1968,58 +2175,21 @@
           <div class="who-not">
             <h4>Important</h4>
             <p>
-              Coaching and educational services are optional and are not required for representation or submission opportunities.
+              Coaching and educational services are optional and are not required for
+              representation or submission opportunities.
             </p>
           </div>
         </div>
       </section>
 
-      <section class="container section-stack">
-        <div class="section-head reveal center">
-          <div class="eyebrow">Feedback</div>
-          <h2>What People Value</h2>
-          <p class="max-760">
-            The most common response is that things feel clearer, more grounded, and more professionally organized after the conversation.
-          </p>
-        </div>
-
-        <div class="testimonial-grid reveal">
-          <div class="testimonial">
-            <div class="quote-mark">“</div>
-            <p>
-              I felt like I finally had someone explain things in a clear, practical way instead of making everything more confusing.
-            </p>
-            <strong>Client Perspective</strong>
-            <span>Clarity &amp; Direction</span>
-          </div>
-
-          <div class="testimonial">
-            <div class="quote-mark">“</div>
-            <p>
-              The biggest value for me was the positioning piece. It helped me think more professionally about how I present myself.
-            </p>
-            <strong>Client Perspective</strong>
-            <span>Positioning &amp; Presentation</span>
-          </div>
-
-          <div class="testimonial">
-            <div class="quote-mark">“</div>
-            <p>
-              I appreciated that it was straight, focused, and strategic. It felt like real guidance, not fluff.
-            </p>
-            <strong>Client Perspective</strong>
-            <span>Professional Strategy</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="faq" class="container section-stack">
+      <section id="faq" class="container section">
         <div class="panel reveal">
           <div class="section-head">
             <div class="eyebrow">FAQ</div>
             <h2>Frequently Asked Questions</h2>
             <p>
-              A few of the more common questions people tend to ask before submitting a request or booking a session.
+              A few of the more common questions people tend to ask before submitting a
+              request or booking a session.
             </p>
           </div>
 
@@ -2030,7 +2200,8 @@
                 <span>+</span>
               </button>
               <div class="faq-answer">
-                No. It can be useful for people at different stages, especially if they want clearer structure, stronger positioning, and better decision-making.
+                No. It can be useful for people at different stages, especially if they
+                want clearer structure, stronger positioning, and better decision-making.
               </div>
             </div>
 
@@ -2040,7 +2211,8 @@
                 <span>+</span>
               </button>
               <div class="faq-answer">
-                No. Coaching is optional. You can submit a request first, ask a question, or start with the free guide.
+                No. Coaching is optional. You can submit a request first, ask a question,
+                or start with the free guide.
               </div>
             </div>
 
@@ -2050,7 +2222,9 @@
                 <span>+</span>
               </button>
               <div class="faq-answer">
-                No ethical service can guarantee specific entertainment outcomes. The purpose here is stronger strategy, better clarity, and more professional movement.
+                No ethical service can guarantee specific entertainment outcomes. The
+                purpose here is stronger strategy, better clarity, and more professional
+                movement.
               </div>
             </div>
 
@@ -2060,7 +2234,8 @@
                 <span>+</span>
               </button>
               <div class="faq-answer">
-                Submit the intake form first. That is the easiest starting point if you want direction before booking anything.
+                Submit the intake form first. That is the easiest starting point if you
+                want direction before booking anything.
               </div>
             </div>
 
@@ -2070,23 +2245,33 @@
                 <span>+</span>
               </button>
               <div class="faq-answer">
-                No. Business structure guidance here is educational. Any legal, tax, accounting, or filing decisions should always be confirmed with qualified professionals.
+                No. Business structure guidance here is educational. Any legal, tax,
+                accounting, or filing decisions should always be confirmed with qualified
+                professionals.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="container section-stack">
+      <section class="container section">
         <div class="final-cta reveal">
           <h2>Take a More Structured Approach</h2>
           <p>
-            Start with the free guide, submit a request, or choose the coaching option that best matches where you are right now.
+            Start with the free guide, submit a request, or choose the coaching option
+            that best matches where you are right now.
           </p>
 
           <div class="lead-actions" style="justify-content:center;">
             <a class="btn btn-primary" href="#connect">Submit Request</a>
-            <a class="btn btn-secondary" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">Open Calendar</a>
+            <a
+              class="btn btn-secondary"
+              href="/Spotlight_Success_Cinematic_Guide_v2.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Free Guide
+            </a>
           </div>
         </div>
 
@@ -2094,28 +2279,42 @@
           <div class="contact-card">
             <h3>Contact</h3>
             <p>
-              For direct questions, general inquiries, or follow-up communication, you can reach out by email.
+              For direct questions, general inquiries, or follow-up communication,
+              you can reach out by email.
             </p>
 
             <div class="contact-actions">
-              <a class="btn-inline btn-gold" href="mailto:info@nucleustalent.com">Email Spotlight Success</a>
+              <a class="btn-inline btn-gold" href="mailto:info@nucleustalent.com">
+                Email Spotlight Success
+              </a>
             </div>
           </div>
 
           <div class="contact-card">
             <h3>Booking &amp; Scheduling</h3>
             <p>
-              You can book through the payment links above and use the calendar to select an appointment time that works best.
+              You can book through the payment links above and use the calendar to
+              select an appointment time that works best.
             </p>
 
             <div class="contact-actions">
-              <a class="btn-inline btn-ghost" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">Open Calendar</a>
+              <a
+                class="btn-inline btn-ghost"
+                href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Calendar
+              </a>
             </div>
           </div>
         </div>
 
         <div class="compliance">
-          Coaching and educational services are optional and are not required for representation or submission opportunities. Any business, legal, or tax-related decisions should be confirmed with the appropriate qualified professionals.
+          Coaching and educational services are optional and are not required for
+          representation or submission opportunities. Any business, legal, or
+          tax-related decisions should be confirmed with the appropriate qualified
+          professionals.
         </div>
       </section>
     </main>
@@ -2123,7 +2322,10 @@
     <footer>
       <div class="container footer-inner">
         <div class="footer-brand">
-          <img src="ChatGPT Image Mar 21, 2026, 09_23_41 AM.png" alt="Spotlight Success logo" />
+          <img
+            src="ChatGPT Image Mar 21, 2026, 09_23_41 AM.png"
+            alt="Spotlight Success logo"
+          />
           <span>Spotlight Success</span>
         </div>
 
@@ -2131,7 +2333,7 @@
           <a href="#top">Top</a>
           <a href="#system">System</a>
           <a href="#approach">Approach</a>
-          <a href="#coaching">Coaching</a>
+          <a href="#guide">Free Guide</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
           <a href="#connect">Get Started</a>
@@ -2143,7 +2345,8 @@
   <script>
     const CONFIG = {
       inquiryEmail: "info@nucleustalent.com",
-      calendarLink: "https://calendar.google.com/calendar/u/0/r/appointment?pli=1"
+      calendarLink: "https://calendar.google.com/calendar/u/0/r/appointment?pli=1",
+      guideLink: "/Spotlight_Success_Cinematic_Guide_v2.pdf"
     };
 
     const revealObserver = new IntersectionObserver((entries) => {
@@ -2177,6 +2380,7 @@
 
     document.querySelectorAll(".faq-item").forEach((item) => {
       const button = item.querySelector(".faq-question");
+
       button.addEventListener("click", () => {
         const isOpen = item.classList.contains("open");
 
@@ -2223,9 +2427,15 @@
         );
 
         formStatus.className = "form-status show success";
-        formStatus.textContent = "Opening your email app now. If nothing happens, email " + CONFIG.inquiryEmail + " directly.";
+        formStatus.textContent =
+          "Opening your email app now. If nothing happens, email " +
+          CONFIG.inquiryEmail +
+          " directly.";
 
-        window.location.href = "mailto:" + CONFIG.inquiryEmail + "?subject=" + subject + "&body=" + body;
+        window.location.href =
+          "mailto:" + CONFIG.inquiryEmail +
+          "?subject=" + subject +
+          "&body=" + body;
       });
     }
 
