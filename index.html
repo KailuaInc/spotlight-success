@@ -3,663 +3,708 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spotlight Success | Greg Lowrance</title>
+  <title>Spotlight Success</title>
   <meta
     name="description"
-    content="Spotlight Success offers high-level guidance for commercials, print, acting, production, and professional business setup."
+    content="Spotlight Success is a premium coaching and training brand focused on strategy, positioning, and professional direction in commercials, print, acting, and production."
   />
   <style>
-    :root {
-      --bg: #070707;
-      --panel: rgba(255,255,255,0.05);
-      --panel-2: rgba(255,255,255,0.08);
-      --line: rgba(255,255,255,0.12);
-      --text: #f5f1e8;
-      --muted: #cbbfae;
-      --soft: #a79a89;
-      --gold: #d7a947;
-      --gold-2: #f0d18e;
-      --shadow: 0 18px 45px rgba(0,0,0,0.42);
-      --radius: 22px;
-      --max: 1240px;
+    :root{
+      --bg:#060606;
+      --bg2:#0b0b0b;
+      --panel:rgba(255,255,255,0.05);
+      --panel2:rgba(255,255,255,0.08);
+      --line:rgba(255,255,255,0.12);
+      --text:#f5f1e8;
+      --muted:#cabfae;
+      --soft:#a79a88;
+      --gold:#d8aa49;
+      --gold2:#f0d28f;
+      --shadow:0 20px 60px rgba(0,0,0,0.45);
+      --radius:24px;
+      --max:1220px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
 
-    body {
-      margin: 0;
-      color: var(--text);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    body{
+      margin:0;
+      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(circle at 18% 8%, rgba(215,169,71,0.16), transparent 24%),
-        radial-gradient(circle at 84% 14%, rgba(215,169,71,0.13), transparent 20%),
-        radial-gradient(circle at 50% 70%, rgba(255,255,255,0.03), transparent 30%),
-        linear-gradient(180deg, #060606 0%, #0a0a0a 55%, #050505 100%);
-      overflow-x: hidden;
+        radial-gradient(circle at 16% 10%, rgba(216,170,73,0.15), transparent 24%),
+        radial-gradient(circle at 86% 12%, rgba(216,170,73,0.12), transparent 20%),
+        linear-gradient(180deg, #050505 0%, #0a0a0a 54%, #050505 100%);
+      overflow-x:hidden;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
       background:
-        linear-gradient(to bottom, rgba(255,255,255,0.02), transparent 15%),
-        radial-gradient(circle at center, transparent 58%, rgba(0,0,0,0.24) 100%);
-      z-index: 0;
+        linear-gradient(to bottom, rgba(255,255,255,0.02), transparent 16%),
+        radial-gradient(circle at center, transparent 58%, rgba(0,0,0,0.22) 100%);
+      z-index:0;
     }
 
-    .wrap { position: relative; z-index: 1; }
-
-    .glow {
-      position: fixed;
-      border-radius: 999px;
-      filter: blur(80px);
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.16;
-    }
-    .glow.one {
-      width: 420px; height: 420px; top: -120px; right: -90px;
-      background: rgba(215,169,71,0.55);
-      animation: drift1 14s ease-in-out infinite;
-    }
-    .glow.two {
-      width: 360px; height: 360px; bottom: -120px; left: -80px;
-      background: rgba(215,169,71,0.42);
-      animation: drift2 18s ease-in-out infinite;
+    .glow{
+      position:fixed;
+      border-radius:999px;
+      filter:blur(85px);
+      pointer-events:none;
+      z-index:0;
+      opacity:.16;
     }
 
-    @keyframes drift1 {
-      0%,100% { transform: translate(0,0); }
-      50% { transform: translate(-20px,18px); }
-    }
-    @keyframes drift2 {
-      0%,100% { transform: translate(0,0); }
-      50% { transform: translate(24px,-16px); }
-    }
-
-    .nav {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 22px 24px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
+    .glow.one{
+      width:420px;
+      height:420px;
+      top:-120px;
+      right:-90px;
+      background:rgba(216,170,73,.55);
+      animation:drift1 14s ease-in-out infinite;
     }
 
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 700;
-      letter-spacing: 0.02em;
+    .glow.two{
+      width:360px;
+      height:360px;
+      bottom:-120px;
+      left:-80px;
+      background:rgba(216,170,73,.38);
+      animation:drift2 18s ease-in-out infinite;
     }
 
-    .brand-mark {
-      width: 15px;
-      height: 15px;
-      border-radius: 4px;
-      background: linear-gradient(135deg, var(--gold-2), var(--gold));
-      box-shadow: 0 0 24px rgba(215,169,71,0.4);
+    @keyframes drift1{
+      0%,100%{transform:translate(0,0);}
+      50%{transform:translate(-18px,16px);}
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    @keyframes drift2{
+      0%,100%{transform:translate(0,0);}
+      50%{transform:translate(22px,-14px);}
     }
 
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.95rem;
+    .wrap{
+      position:relative;
+      z-index:1;
     }
 
-    .nav-links a:hover { color: var(--text); }
-
-    .nav-links .nav-cta {
-      padding: 11px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(215,169,71,0.35);
-      background: rgba(215,169,71,0.08);
-      color: var(--gold-2);
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:22px 24px 0;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
     }
 
-    .hero {
-      max-width: var(--max);
-      margin: 0 auto;
-      min-height: 88vh;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 34px;
-      align-items: center;
-      padding: 36px 24px 40px;
+    .brand{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:var(--text);
+      font-weight:700;
+      letter-spacing:.02em;
     }
 
-    .hero-copy {
-      opacity: 0;
-      transform: translateY(18px);
-      animation: riseIn 0.9s ease forwards;
+    .brand-mark{
+      width:15px;
+      height:15px;
+      border-radius:4px;
+      background:linear-gradient(135deg,var(--gold2),var(--gold));
+      box-shadow:0 0 24px rgba(216,170,73,.42);
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--gold-2);
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-size: 0.82rem;
-      margin-bottom: 24px;
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:20px;
     }
 
-    .eyebrow::before {
-      content: "";
-      width: 54px;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold));
+    .nav-links a{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:.95rem;
+      transition:color .24s ease;
     }
 
-    h1 {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(3.5rem, 7vw, 6.25rem);
-      line-height: 0.93;
-      letter-spacing: -0.04em;
-      text-wrap: balance;
+    .nav-links a:hover{color:var(--text);}
+
+    .nav-links .nav-cta{
+      padding:11px 16px;
+      border-radius:999px;
+      border:1px solid rgba(216,170,73,.34);
+      background:rgba(216,170,73,.08);
+      color:var(--gold2);
     }
 
-    .gold {
-      color: var(--gold);
-      text-shadow: 0 0 28px rgba(215,169,71,0.12);
+    .hero{
+      max-width:var(--max);
+      margin:0 auto;
+      min-height:90vh;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:34px;
+      align-items:center;
+      padding:34px 24px 42px;
     }
 
-    .lead {
-      margin-top: 22px;
-      max-width: 720px;
-      font-size: clamp(1.07rem, 1.4vw, 1.24rem);
-      line-height: 1.78;
-      color: var(--muted);
+    .hero-copy{
+      opacity:0;
+      transform:translateY(18px);
+      animation:riseIn .9s ease forwards;
     }
 
-    .micro-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      list-style: none;
-      margin: 28px 0 0;
-      padding: 0;
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      color:var(--gold2);
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:.82rem;
+      margin-bottom:24px;
     }
 
-    .micro-points li {
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      color: #e9dfcf;
-      font-size: 0.92rem;
+    .eyebrow::before{
+      content:"";
+      width:54px;
+      height:1px;
+      background:linear-gradient(to right, transparent, var(--gold));
     }
 
-    .hero-note {
-      margin-top: 18px;
-      max-width: 680px;
-      color: rgba(255,255,255,0.55);
-      font-size: 0.9rem;
-      line-height: 1.7;
+    h1{
+      margin:0;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(3.7rem,7vw,6.35rem);
+      line-height:.93;
+      letter-spacing:-.045em;
+      text-wrap:balance;
     }
 
-    .hero-visual {
-      position: relative;
-      min-height: 620px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: riseIn 1s ease 0.12s forwards;
+    .gold{
+      color:var(--gold);
+      text-shadow:0 0 28px rgba(216,170,73,.12);
     }
 
-    .visual-frame {
-      position: absolute;
-      inset: 32px 0 0 36px;
-      border-radius: 30px;
-      overflow: hidden;
+    .lead{
+      margin-top:22px;
+      max-width:720px;
+      font-size:clamp(1.08rem,1.45vw,1.24rem);
+      line-height:1.8;
+      color:var(--muted);
+    }
+
+    .micro-points{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      list-style:none;
+      margin:28px 0 0;
+      padding:0;
+    }
+
+    .micro-points li{
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:#e8dece;
+      font-size:.92rem;
+    }
+
+    .hero-note{
+      margin-top:18px;
+      max-width:700px;
+      color:rgba(255,255,255,.56);
+      font-size:.9rem;
+      line-height:1.72;
+    }
+
+    .hero-visual{
+      position:relative;
+      min-height:640px;
+      opacity:0;
+      transform:translateY(20px);
+      animation:riseIn 1s ease .12s forwards;
+    }
+
+    .visual-frame{
+      position:absolute;
+      inset:30px 0 0 34px;
+      border-radius:30px;
+      overflow:hidden;
       background:
-        radial-gradient(circle at 22% 18%, rgba(215,169,71,0.16), transparent 24%),
-        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
+        radial-gradient(circle at 22% 18%, rgba(216,170,73,.16), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(8px);
     }
 
-    .visual-frame::before {
-      content: "";
-      position: absolute;
-      inset: 0;
+    .visual-frame::before{
+      content:"";
+      position:absolute;
+      inset:0;
       background:
-        linear-gradient(to left, rgba(8,8,8,0.02), rgba(8,8,8,0.52) 65%, rgba(8,8,8,0.92) 100%),
-        linear-gradient(to top, rgba(8,8,8,0.10), rgba(8,8,8,0.0) 30%);
-      z-index: 2;
-      pointer-events: none;
+        linear-gradient(to left, rgba(8,8,8,.02), rgba(8,8,8,.52) 65%, rgba(8,8,8,.92) 100%),
+        linear-gradient(to top, rgba(8,8,8,.10), rgba(8,8,8,0) 30%);
+      z-index:2;
+      pointer-events:none;
     }
 
-    .portrait {
-      position: absolute;
-      right: 26px;
-      bottom: 0;
-      width: min(100%, 350px);
-      max-height: 92%;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 24px 24px 0 0;
-      filter: contrast(1.02) saturate(1.03) drop-shadow(0 18px 36px rgba(0,0,0,0.34));
-      z-index: 1;
+    .portrait{
+      position:absolute;
+      right:22px;
+      bottom:0;
+      width:min(100%,340px);
+      max-height:92%;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:24px 24px 0 0;
+      filter:contrast(1.02) saturate(1.03) drop-shadow(0 18px 36px rgba(0,0,0,.34));
+      z-index:1;
     }
 
-    .portrait-card {
-      position: absolute;
-      top: 28px;
-      left: 28px;
-      width: min(72%, 340px);
-      padding: 22px 20px;
-      border-radius: 20px;
-      background: rgba(9,9,9,0.58);
-      border: 1px solid rgba(255,255,255,0.10);
-      backdrop-filter: blur(10px);
-      z-index: 3;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.28);
+    .portrait-card{
+      position:absolute;
+      top:28px;
+      left:28px;
+      width:min(72%,340px);
+      padding:22px 20px;
+      border-radius:20px;
+      background:rgba(9,9,9,.58);
+      border:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(10px);
+      z-index:3;
+      box-shadow:0 14px 30px rgba(0,0,0,.28);
     }
 
-    .portrait-card h3 {
-      margin: 0 0 10px;
-      font-size: 1rem;
-      color: var(--text);
+    .portrait-card h3{
+      margin:0 0 10px;
+      font-size:1rem;
+      color:var(--text);
     }
 
-    .portrait-card p {
-      margin: 0;
-      font-size: 0.94rem;
-      line-height: 1.7;
-      color: #d4cabd;
+    .portrait-card p{
+      margin:0;
+      font-size:.94rem;
+      line-height:1.7;
+      color:#d4cabd;
     }
 
-    .lead-panel {
-      margin-top: 34px;
-      padding: 26px;
-      border-radius: 24px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: var(--shadow);
-      max-width: 720px;
+    .lead-panel{
+      margin-top:34px;
+      padding:28px;
+      border-radius:26px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
+      max-width:760px;
     }
 
-    .lead-panel h3 {
-      margin: 0 0 10px;
-      font-size: 1.5rem;
-      font-family: Georgia, "Times New Roman", serif;
+    .lead-panel h3{
+      margin:0 0 10px;
+      font-size:1.55rem;
+      font-family:Georgia,"Times New Roman",serif;
     }
 
-    .lead-panel p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      line-height: 1.75;
+    .lead-panel p{
+      margin:0 0 18px;
+      color:var(--muted);
+      line-height:1.78;
     }
 
-    .lead-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-bottom: 14px;
+    .lead-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-bottom:14px;
     }
 
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
     }
 
-    .field label {
-      font-size: 0.9rem;
-      color: #e9dfcf;
+    .field label{
+      font-size:.9rem;
+      color:#e9dfcf;
     }
 
     .field input,
     .field select,
-    .field textarea {
-      width: 100%;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
-      color: var(--text);
-      border-radius: 14px;
-      padding: 14px 14px;
-      font: inherit;
-      outline: none;
+    .field textarea{
+      width:100%;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      border-radius:14px;
+      padding:14px 14px;
+      font:inherit;
+      outline:none;
     }
 
     .field input::placeholder,
-    .field textarea::placeholder {
-      color: #9f9588;
+    .field textarea::placeholder{
+      color:#9f9588;
     }
 
-    .field textarea {
-      min-height: 120px;
-      resize: vertical;
+    .field textarea{
+      min-height:120px;
+      resize:vertical;
     }
 
-    .lead-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      align-items: center;
-      margin-top: 18px;
+    .qualification{
+      margin:10px 0 2px;
+      padding:14px 16px;
+      border-radius:16px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      color:#e7ddce;
+      font-size:.92rem;
+      line-height:1.68;
     }
 
-    .btn {
-      appearance: none;
-      border: 0;
-      text-decoration: none;
-      padding: 16px 24px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 1rem;
-      min-width: 210px;
-      text-align: center;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
-      cursor: pointer;
+    .lead-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      align-items:center;
+      margin-top:18px;
     }
 
-    .btn:hover { transform: translateY(-1px); }
-
-    .btn-primary {
-      color: #1c1408;
-      background: linear-gradient(135deg, var(--gold-2), var(--gold));
-      box-shadow: 0 14px 32px rgba(215,169,71,0.22);
+    .btn{
+      appearance:none;
+      border:0;
+      text-decoration:none;
+      padding:16px 24px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:1rem;
+      min-width:210px;
+      text-align:center;
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease;
+      cursor:pointer;
     }
 
-    .btn-secondary {
-      color: var(--text);
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.15);
+    .btn:hover{transform:translateY(-1px);}
+
+    .btn-primary{
+      color:#1c1408;
+      background:linear-gradient(135deg,var(--gold2),var(--gold));
+      box-shadow:0 14px 32px rgba(216,170,73,.22);
     }
 
-    .tiny-note {
-      color: rgba(255,255,255,0.52);
-      font-size: 0.83rem;
-      line-height: 1.65;
-      margin-top: 10px;
+    .btn-secondary{
+      color:var(--text);
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.15);
     }
 
-    .sections {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 6px 24px 100px;
+    .tiny-note{
+      color:rgba(255,255,255,.52);
+      font-size:.83rem;
+      line-height:1.66;
+      margin-top:10px;
     }
 
-    .trio {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-bottom: 24px;
+    .sections{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:6px 24px 100px;
     }
 
-    .card {
-      padding: 28px;
-      border-radius: 24px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: var(--shadow);
+    .trio{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-bottom:24px;
     }
 
-    .icon {
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: rgba(215,169,71,0.12);
-      color: var(--gold-2);
-      border: 1px solid rgba(215,169,71,0.24);
-      margin-bottom: 18px;
-      font-size: 1.12rem;
+    .card{
+      padding:28px;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
     }
 
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 1.2rem;
+    .icon{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      background:rgba(216,170,73,.12);
+      color:var(--gold2);
+      border:1px solid rgba(216,170,73,.24);
+      margin-bottom:18px;
+      font-size:1.12rem;
     }
 
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.76;
+    .card h3{
+      margin:0 0 10px;
+      font-size:1.2rem;
     }
 
-    .split {
-      display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 22px;
-      margin-top: 22px;
-      margin-bottom: 22px;
+    .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.76;
     }
 
-    .panel {
-      padding: 34px;
-      border-radius: 28px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.09);
-      box-shadow: var(--shadow);
+    .split{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:22px;
+      margin-top:22px;
+      margin-bottom:22px;
     }
 
-    .panel h2 {
-      margin: 0 0 12px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2rem, 3vw, 3rem);
-      line-height: 1.04;
-      text-wrap: balance;
+    .panel{
+      padding:34px;
+      border-radius:28px;
+      background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.09);
+      box-shadow:var(--shadow);
     }
 
-    .panel .sub {
-      color: var(--muted);
-      font-size: 1.05rem;
-      line-height: 1.82;
-      margin-bottom: 24px;
-      max-width: 760px;
+    .panel h2{
+      margin:0 0 12px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2rem,3vw,3rem);
+      line-height:1.04;
+      text-wrap:balance;
     }
 
-    .steps {
-      display: grid;
-      gap: 14px;
+    .panel .sub{
+      color:var(--muted);
+      font-size:1.05rem;
+      line-height:1.82;
+      margin-bottom:24px;
+      max-width:760px;
     }
 
-    .step {
-      display: grid;
-      grid-template-columns: 56px 1fr;
-      gap: 16px;
-      align-items: start;
-      padding: 16px 14px;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.08);
+    .steps{
+      display:grid;
+      gap:14px;
     }
 
-    .step-num {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold-2), var(--gold));
-      color: #241707;
-      font-weight: 800;
-      box-shadow: 0 10px 24px rgba(215,169,71,0.18);
+    .step{
+      display:grid;
+      grid-template-columns:56px 1fr;
+      gap:16px;
+      align-items:start;
+      padding:16px 14px;
+      border-radius:18px;
+      background:rgba(255,255,255,.035);
+      border:1px solid rgba(255,255,255,.08);
     }
 
-    .step h4 {
-      margin: 2px 0 6px;
-      font-size: 1.06rem;
+    .step-num{
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--gold2),var(--gold));
+      color:#241707;
+      font-weight:800;
+      box-shadow:0 10px 24px rgba(216,170,73,.18);
     }
 
-    .step p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.68;
+    .step h4{
+      margin:2px 0 6px;
+      font-size:1.06rem;
     }
 
-    .checklist {
-      list-style: none;
-      margin: 20px 0 0;
-      padding: 0;
-      display: grid;
-      gap: 12px;
+    .step p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.68;
     }
 
-    .checklist li {
-      position: relative;
-      padding-left: 26px;
-      color: #ece3d5;
-      line-height: 1.72;
+    .checklist{
+      list-style:none;
+      margin:20px 0 0;
+      padding:0;
+      display:grid;
+      gap:12px;
     }
 
-    .checklist li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--gold);
-      font-weight: 800;
+    .checklist li{
+      position:relative;
+      padding-left:26px;
+      color:#ece3d5;
+      line-height:1.72;
     }
 
-    .pricing {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 24px;
+    .checklist li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      top:0;
+      color:var(--gold);
+      font-weight:800;
     }
 
-    .price-card {
-      padding: 28px;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.09);
-      background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025));
-      box-shadow: var(--shadow);
+    .pricing{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:24px;
     }
 
-    .price-card.featured {
-      background: linear-gradient(180deg, rgba(215,169,71,0.18), rgba(255,255,255,0.04));
-      border-color: rgba(215,169,71,0.28);
-      transform: translateY(-4px);
+    .price-card{
+      padding:28px;
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,.09);
+      background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.025));
+      box-shadow:var(--shadow);
     }
 
-    .label {
-      color: var(--gold-2);
-      font-size: 0.82rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
+    .price-card.featured{
+      background:linear-gradient(180deg, rgba(216,170,73,.18), rgba(255,255,255,.04));
+      border-color:rgba(216,170,73,.28);
+      transform:translateY(-4px);
     }
 
-    .price {
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 8px;
+    .label{
+      color:var(--gold2);
+      font-size:.82rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:10px;
     }
 
-    .price-title {
-      font-size: 1.18rem;
-      font-weight: 700;
-      margin-bottom: 10px;
+    .price{
+      font-size:2.2rem;
+      font-weight:800;
+      margin-bottom:8px;
     }
 
-    .price-card p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      line-height: 1.72;
+    .price-title{
+      font-size:1.18rem;
+      font-weight:700;
+      margin-bottom:10px;
     }
 
-    .final-cta {
-      margin-top: 28px;
-      padding: 40px 24px;
-      border-radius: 30px;
-      text-align: center;
+    .price-card p{
+      margin:0 0 14px;
+      color:var(--muted);
+      line-height:1.72;
+    }
+
+    .who-not{
+      margin-top:24px;
+      padding:18px 18px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.03);
+    }
+
+    .who-not h4{
+      margin:0 0 10px;
+      font-size:1rem;
+      color:#f0e6d8;
+    }
+
+    .who-not p{
+      margin:0;
+      color:var(--soft);
+      line-height:1.72;
+      font-size:.96rem;
+    }
+
+    .final-cta{
+      margin-top:28px;
+      padding:40px 24px;
+      border-radius:30px;
+      text-align:center;
       background:
-        radial-gradient(circle at top center, rgba(215,169,71,0.18), transparent 34%),
-        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: var(--shadow);
+        radial-gradient(circle at top center, rgba(216,170,73,.18), transparent 34%),
+        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
     }
 
-    .final-cta h2 {
-      margin: 0 0 12px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.05rem, 4vw, 3.4rem);
-      line-height: 1.05;
+    .final-cta h2{
+      margin:0 0 12px;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2.05rem,4vw,3.4rem);
+      line-height:1.05;
     }
 
-    .final-cta p {
-      max-width: 760px;
-      margin: 0 auto 24px;
-      color: var(--muted);
-      line-height: 1.8;
-      font-size: 1.02rem;
+    .final-cta p{
+      max-width:760px;
+      margin:0 auto 24px;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:1.02rem;
     }
 
-    .compliance {
-      max-width: 920px;
-      margin: 28px auto 0;
-      text-align: center;
-      color: rgba(255,255,255,0.48);
-      font-size: 0.82rem;
-      line-height: 1.68;
+    .compliance{
+      max-width:920px;
+      margin:28px auto 0;
+      text-align:center;
+      color:rgba(255,255,255,.48);
+      font-size:.82rem;
+      line-height:1.68;
     }
 
-    footer {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 42px 24px 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      color: rgba(255,255,255,0.5);
-      font-size: 0.9rem;
+    footer{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:42px 24px 60px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      color:rgba(255,255,255,.5);
+      font-size:.9rem;
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 0.75s ease, transform 0.75s ease;
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .75s ease, transform .75s ease;
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .reveal.visible{
+      opacity:1;
+      transform:translateY(0);
     }
 
-    @keyframes riseIn {
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes riseIn{
+      to{opacity:1;transform:translateY(0);}
     }
 
-    @media (max-width: 1080px) {
-      .hero, .trio, .split, .pricing { grid-template-columns: 1fr; }
-      .hero { min-height: auto; }
-      .hero-visual { min-height: 500px; order: -1; }
-      .visual-frame { inset: 0; }
-      .portrait { width: min(72%, 320px); right: 14px; }
+    @media (max-width:1080px){
+      .hero,.trio,.split,.pricing{grid-template-columns:1fr;}
+      .hero{min-height:auto;}
+      .hero-visual{min-height:500px;order:-1;}
+      .visual-frame{inset:0;}
+      .portrait{width:min(72%,320px);right:14px;}
     }
 
-    @media (max-width: 720px) {
-      .nav-links { display: none; }
-      .hero, .sections, footer { padding-left: 18px; padding-right: 18px; }
-      .lead-grid { grid-template-columns: 1fr; }
-      .lead-actions { flex-direction: column; align-items: stretch; }
-      .btn { width: 100%; min-width: 0; }
-      .hero-visual { min-height: 410px; }
-      .portrait { width: min(76%, 250px); right: 10px; }
-      .portrait-card { left: 14px; top: 14px; width: calc(100% - 110px); padding: 16px; }
-      .panel, .card, .price-card, .final-cta, .lead-panel { padding: 22px; }
-      footer { flex-direction: column; align-items: flex-start; }
+    @media (max-width:720px){
+      .nav-links{display:none;}
+      .hero,.sections,footer{padding-left:18px;padding-right:18px;}
+      .lead-grid{grid-template-columns:1fr;}
+      .lead-actions{flex-direction:column;align-items:stretch;}
+      .btn{width:100%;min-width:0;}
+      .hero-visual{min-height:410px;}
+      .portrait{width:min(76%,250px);right:10px;}
+      .portrait-card{left:14px;top:14px;width:calc(100% - 110px);padding:16px;}
+      .panel,.card,.price-card,.final-cta,.lead-panel{padding:22px;}
+      footer{flex-direction:column;align-items:flex-start;}
     }
   </style>
 </head>
@@ -676,7 +721,7 @@
 
       <div class="nav-links">
         <a href="#system">The System</a>
-        <a href="#about">About Greg</a>
+        <a href="#about">Approach</a>
         <a href="#coaching">Coaching</a>
         <a class="nav-cta" href="#connect">Get Started</a>
       </div>
@@ -684,7 +729,7 @@
 
     <section class="hero">
       <div class="hero-copy">
-        <div class="eyebrow">Enter the Industry</div>
+        <div class="eyebrow">Coaching and Training Brand</div>
 
         <h1>
           Spotlight<br />
@@ -692,25 +737,29 @@
         </h1>
 
         <p class="lead">
-          High-level guidance for commercials, print, acting, production, and professional business setup. Built for people who want a clearer path, a stronger presentation, and smarter next steps in entertainment.
+          Strategic guidance for individuals serious about building a professional path in commercials, print, acting, and production.
+        </p>
+
+        <p class="lead">
+          Designed for those who want clearer direction, stronger positioning, and a more disciplined approach to navigating the entertainment industry.
         </p>
 
         <ul class="micro-points">
-          <li>Commercials</li>
-          <li>Print</li>
-          <li>Acting</li>
-          <li>Production</li>
-          <li>Business Setup</li>
+          <li>Clear Direction</li>
+          <li>Stronger Positioning</li>
+          <li>Professional Presentation</li>
+          <li>Smarter Industry Navigation</li>
+          <li>Business Structure Awareness</li>
         </ul>
 
         <div class="hero-note">
-          Optional educational guidance from Greg Lowrance. Thoughtful, polished, practical, and designed to help you move with more confidence and less wasted time.
+          This is intended for individuals ready to approach the industry with focus, professionalism, and a more structured mindset.
         </div>
 
         <div id="connect" class="lead-panel">
-          <h3>Request Information</h3>
+          <h3>Spotlight Success</h3>
           <p>
-            Share a few quick details below and your message will be prepared to send directly to Greg at Nucleus Talent.
+            Share a few details below and your request will be reviewed with the appropriate next steps.
           </p>
 
           <form id="leadForm">
@@ -726,35 +775,44 @@
               </div>
 
               <div class="field">
-                <label for="interest">Area of Interest</label>
+                <label for="interest">Primary Interest</label>
                 <select id="interest" name="interest">
-                  <option>General Information</option>
-                  <option>Free Guide</option>
-                  <option>Strategy Call</option>
+                  <option>General Inquiry</option>
+                  <option>Strategy Guidance</option>
                   <option>Business Setup Guidance</option>
                   <option>Clarity Call</option>
+                  <option>Strategy Session</option>
                   <option>Starter Package</option>
                 </select>
               </div>
 
               <div class="field">
-                <label for="phone">Phone (Optional)</label>
-                <input id="phone" name="phone" type="text" placeholder="Optional" />
+                <label for="readiness">Current Readiness</label>
+                <select id="readiness" name="readiness">
+                  <option>Just Exploring</option>
+                  <option>Ready for Direction</option>
+                  <option>Ready to Take Action</option>
+                  <option>Actively Building Now</option>
+                </select>
               </div>
             </div>
 
             <div class="field">
               <label for="message">What would you like help with?</label>
-              <textarea id="message" name="message" placeholder="Tell Greg a little about where you are and what you would like help with."></textarea>
+              <textarea id="message" name="message" placeholder="Briefly describe where you are, what you are building, and what kind of guidance you are looking for."></textarea>
+            </div>
+
+            <div class="qualification">
+              This brand is built for people looking for clarity, structure, and a more professional approach. Not every request will be the right fit, and that is intentional.
             </div>
 
             <div class="lead-actions">
-              <button type="submit" class="btn btn-primary">Send Request</button>
+              <button type="submit" class="btn btn-primary">Submit Request</button>
               <a class="btn btn-secondary" href="https://bit.ly/GetSpotlightNow" target="_blank" rel="noopener noreferrer">Download Free Guide</a>
             </div>
 
             <div class="tiny-note">
-              This no-service version opens a prepared email on the visitor’s device so nothing gets lost or sent to a third party.
+              Requests are reviewed before response. This is not an open intake.
             </div>
           </form>
         </div>
@@ -763,13 +821,13 @@
       <div class="hero-visual">
         <div class="visual-frame">
           <div class="portrait-card">
-            <h3>Greg Lowrance</h3>
+            <h3>Professional Guidance</h3>
             <p>
-              Founder of Nucleus Talent Management. Strategic guidance designed to help talent think more clearly, present more professionally, and navigate the business with greater confidence.
+              Built to help individuals think more clearly, present themselves more professionally, and move through the industry with greater precision.
             </p>
           </div>
 
-          <img src="greg.jpeg" alt="Greg Lowrance" class="portrait" />
+          <img src="greg.jpeg" alt="Spotlight Success" class="portrait" />
         </div>
       </div>
     </section>
@@ -779,17 +837,25 @@
         <div class="card">
           <div class="icon">✦</div>
           <h3>Get Clear</h3>
-          <p>Understand what matters first so your effort goes into the right moves instead of scattered activity.</p>
+          <p>
+            Understand what matters first so your effort goes into the right moves instead of scattered activity.
+          </p>
         </div>
+
         <div class="card">
           <div class="icon">✦</div>
           <h3>Look More Professional</h3>
-          <p>Sharpen how you present yourself so preventable mistakes do not undercut your opportunities.</p>
+          <p>
+            Sharpen how you present yourself so preventable mistakes do not undercut your opportunities.
+          </p>
         </div>
+
         <div class="card">
           <div class="icon">✦</div>
           <h3>Move Smarter</h3>
-          <p>Learn how to approach acting, print, commercials, production, and business setup with more structure.</p>
+          <p>
+            Learn how to approach the industry with more structure, more discipline, and less wasted motion.
+          </p>
         </div>
       </section>
 
@@ -797,54 +863,99 @@
         <div class="panel">
           <h2>The Spotlight Success System</h2>
           <div class="sub">
-            A five-part framework designed to help talent understand the landscape, strengthen their position, and make better strategic decisions from the beginning.
+            A structured framework focused on clarity, positioning, and long-term thinking rather than shortcuts, noise, or constant guesswork.
           </div>
 
           <div class="steps">
-            <div class="step"><div class="step-num">1</div><div><h4>Foundation</h4><p>Build a stronger base so your materials, direction, and next moves all work together.</p></div></div>
-            <div class="step"><div class="step-num">2</div><div><h4>Commercials</h4><p>Understand how the commercial world works and how to present yourself more effectively within it.</p></div></div>
-            <div class="step"><div class="step-num">3</div><div><h4>Commercial Lifestyle Print</h4><p>See where your look may fit and how print opportunities can support a broader career path.</p></div></div>
-            <div class="step"><div class="step-num">4</div><div><h4>Acting</h4><p>Get clearer on positioning, professionalism, and how to avoid some of the most common mistakes.</p></div></div>
-            <div class="step"><div class="step-num">5</div><div><h4>Production</h4><p>Gain a more practical understanding of the production side so your industry knowledge is more complete.</p></div></div>
+            <div class="step">
+              <div class="step-num">1</div>
+              <div>
+                <h4>Foundation</h4>
+                <p>Build a stronger base so your materials, direction, and next moves all support each other.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">2</div>
+              <div>
+                <h4>Commercial Strategy</h4>
+                <p>Understand where you may fit and how to approach that area with more intention and professionalism.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">3</div>
+              <div>
+                <h4>Print Positioning</h4>
+                <p>See how your look, presentation, and branding may support a stronger overall path.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">4</div>
+              <div>
+                <h4>Acting Direction</h4>
+                <p>Get more precise about how you are presenting yourself and where your effort is actually going.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">5</div>
+              <div>
+                <h4>Production Awareness</h4>
+                <p>Gain a broader understanding of the business so your decisions are made from a stronger vantage point.</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="panel">
-          <h2>Business Setup Guidance</h2>
+          <h2>Business Structure Guidance</h2>
           <div class="sub">
-            Greg can also help explain basic business setup steps, including forming an entity through the proper state process and obtaining an EIN for those who want to operate more professionally.
+            For those who want to operate more professionally, guidance can also include basic business structure awareness, including entity formation steps and EIN setup.
           </div>
 
           <ul class="checklist">
-            <li>Understand the basic purpose of an entity and EIN in a working talent context.</li>
-            <li>See how some performers use a properly formed business to organize income and expenses more cleanly.</li>
-            <li>Get practical guidance on setup steps without confusion or overcomplication.</li>
-            <li>Confirm any legal, tax, or accounting specifics with your own qualified professionals.</li>
+            <li>Understand why some people choose to operate through a business structure.</li>
+            <li>See how that can support cleaner organization of certain business-related activity.</li>
+            <li>Learn the basic process in a more straightforward and practical way.</li>
+            <li>Confirm legal, tax, and accounting specifics with your own qualified professionals.</li>
           </ul>
         </div>
       </section>
 
       <section id="about" class="split reveal">
         <div class="panel">
-          <h2>About Greg Lowrance</h2>
+          <h2>Why This Approach Stands Out</h2>
           <div class="sub">
-            Greg brings decades of business and entertainment experience to the conversation, with an emphasis on strategy, positioning, and helping people approach the industry with more intelligence and professionalism.
+            This approach is built around clarity, positioning, and long-term thinking, not shortcuts or noise.
           </div>
 
           <ul class="checklist">
-            <li>Worked with brands including Apple, Amazon, Coca-Cola, Target, Verizon, and more.</li>
-            <li>Founder of Nucleus Talent Management.</li>
-            <li>Focused on practical thinking, stronger positioning, and better long-term decisions.</li>
+            <li>The goal is to help you move with more precision, not just more activity.</li>
+            <li>The emphasis is on stronger decision-making, not random momentum.</li>
+            <li>The overall focus is professionalism, structure, and better judgment.</li>
           </ul>
         </div>
 
         <div class="panel">
-          <h2>Why This Approach Stands Out</h2>
+          <h2>Who This Is For</h2>
           <div class="sub">
-            This is not about hype or noise. It is about seeing the business more clearly, presenting yourself more strongly, and making better decisions with your time, money, and energy.
+            Spotlight Success is designed for people who want a more serious and better organized approach to building their path.
           </div>
 
-          <a class="btn btn-primary" href="#connect">Request Information</a>
+          <ul class="checklist">
+            <li>Individuals who want clearer direction.</li>
+            <li>People who value stronger positioning and presentation.</li>
+            <li>Those ready to think more strategically about their next steps.</li>
+          </ul>
+
+          <div class="who-not">
+            <h4>Who this is not for</h4>
+            <p>
+              This is not built for people looking for instant shortcuts, casual advice with no follow-through, or an open-ended hand-holding process without real commitment.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -852,7 +963,7 @@
         <div class="panel">
           <h2>Optional Coaching</h2>
           <div class="sub">
-            Strategy-based conversations for people who want a more direct look at their path, presentation, and next steps.
+            These are structured conversations designed to provide clarity, direction, and practical next steps.
           </div>
 
           <div class="pricing">
@@ -860,34 +971,47 @@
               <div class="label">Entry Point</div>
               <div class="price">$95</div>
               <div class="price-title">Clarity Call</div>
-              <p>A focused conversation designed to help you get sharper on what matters most right now.</p>
+              <p>
+                A focused conversation designed to help you get sharper on what matters most right now.
+              </p>
             </div>
 
             <div class="price-card featured">
               <div class="label">Most Popular</div>
               <div class="price">$175</div>
               <div class="price-title">Strategy Session</div>
-              <p>A deeper session for people who want more tailored guidance around direction, materials, and positioning.</p>
+              <p>
+                A deeper session for people who want more tailored guidance around direction, materials, and positioning.
+              </p>
             </div>
 
             <div class="price-card">
               <div class="label">Expanded Support</div>
               <div class="price">$495</div>
               <div class="price-title">Starter Package</div>
-              <p>A more involved option for those who want broader guidance and a stronger starting structure.</p>
+              <p>
+                A more involved option for those who want broader guidance and a stronger starting structure.
+              </p>
             </div>
+          </div>
+
+          <div class="who-not">
+            <h4>Important</h4>
+            <p>
+              Not everyone is a fit, and that is intentional.
+            </p>
           </div>
         </div>
       </section>
 
       <section class="final-cta reveal">
-        <h2>Move Forward With More Confidence</h2>
+        <h2>Take a More Structured Approach</h2>
         <p>
-          Start with the free guide or send a direct request if you want a more tailored conversation about your next step.
+          Start with the free guide or submit a request if you are ready to approach this more professionally.
         </p>
 
         <div class="lead-actions" style="justify-content:center;">
-          <a class="btn btn-primary" href="#connect">Request Information</a>
+          <a class="btn btn-primary" href="#connect">Submit Request</a>
           <a class="btn btn-secondary" href="https://bit.ly/GetSpotlightNow" target="_blank" rel="noopener noreferrer">Download Free Guide</a>
         </div>
       </section>
@@ -899,7 +1023,7 @@
 
     <footer>
       <div>Spotlight Success</div>
-      <div>Greg Lowrance</div>
+      <div>Professional Guidance</div>
     </footer>
   </div>
 
@@ -912,31 +1036,24 @@
 
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-    function trackLead(name) {
-      try {
-        window.va && window.va('event', { name: name });
-      } catch (e) {}
-    }
-
-    document.getElementById('leadForm').addEventListener('submit', function (e) {
+    document.getElementById('leadForm').addEventListener('submit', function(e){
       e.preventDefault();
 
       const name = document.getElementById('name').value.trim();
       const email = document.getElementById('email').value.trim();
       const interest = document.getElementById('interest').value.trim();
-      const phone = document.getElementById('phone').value.trim();
+      const readiness = document.getElementById('readiness').value.trim();
       const message = document.getElementById('message').value.trim();
 
-      const subject = encodeURIComponent('Spotlight Success Inquiry - ' + interest);
+      const subject = encodeURIComponent('Spotlight Success Inquiry');
       const body = encodeURIComponent(
         'Name: ' + name + '\n' +
         'Email: ' + email + '\n' +
-        'Phone: ' + (phone || 'Not provided') + '\n' +
-        'Area of Interest: ' + interest + '\n\n' +
+        'Primary Interest: ' + interest + '\n' +
+        'Current Readiness: ' + readiness + '\n\n' +
         'Message:\n' + (message || 'No message provided')
       );
 
-      trackLead('lead_form_submit');
       window.location.href = 'mailto:info@nucleustalent.com?subject=' + subject + '&body=' + body;
     });
   </script>
