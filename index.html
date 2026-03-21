@@ -11,36 +11,29 @@
   <style>
     :root {
       --bg: #070707;
-      --bg-2: #0d0d0d;
-      --panel: rgba(255, 255, 255, 0.05);
-      --panel-2: rgba(255, 255, 255, 0.08);
-      --line: rgba(255, 255, 255, 0.12);
+      --panel: rgba(255,255,255,0.05);
+      --panel-2: rgba(255,255,255,0.08);
+      --line: rgba(255,255,255,0.12);
       --text: #f5f1e8;
       --muted: #cbbfae;
       --soft: #a79a89;
       --gold: #d7a947;
       --gold-2: #f0d18e;
-      --gold-deep: #9b6a16;
-      --shadow: 0 18px 45px rgba(0, 0, 0, 0.42);
+      --shadow: 0 18px 45px rgba(0,0,0,0.42);
       --radius: 22px;
       --max: 1240px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       color: var(--text);
       font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       background:
-        radial-gradient(circle at 18% 8%, rgba(215, 169, 71, 0.16), transparent 24%),
-        radial-gradient(circle at 84% 14%, rgba(215, 169, 71, 0.13), transparent 20%),
+        radial-gradient(circle at 18% 8%, rgba(215,169,71,0.16), transparent 24%),
+        radial-gradient(circle at 84% 14%, rgba(215,169,71,0.13), transparent 20%),
         radial-gradient(circle at 50% 70%, rgba(255,255,255,0.03), transparent 30%),
         linear-gradient(180deg, #060606 0%, #0a0a0a 55%, #050505 100%);
       overflow-x: hidden;
@@ -57,6 +50,8 @@
       z-index: 0;
     }
 
+    .wrap { position: relative; z-index: 1; }
+
     .glow {
       position: fixed;
       border-radius: 999px;
@@ -65,38 +60,24 @@
       z-index: 0;
       opacity: 0.16;
     }
-
     .glow.one {
-      width: 420px;
-      height: 420px;
-      top: -120px;
-      right: -90px;
-      background: rgba(215, 169, 71, 0.55);
+      width: 420px; height: 420px; top: -120px; right: -90px;
+      background: rgba(215,169,71,0.55);
       animation: drift1 14s ease-in-out infinite;
     }
-
     .glow.two {
-      width: 360px;
-      height: 360px;
-      bottom: -120px;
-      left: -80px;
-      background: rgba(215, 169, 71, 0.42);
+      width: 360px; height: 360px; bottom: -120px; left: -80px;
+      background: rgba(215,169,71,0.42);
       animation: drift2 18s ease-in-out infinite;
     }
 
     @keyframes drift1 {
-      0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(-20px, 18px); }
+      0%,100% { transform: translate(0,0); }
+      50% { transform: translate(-20px,18px); }
     }
-
     @keyframes drift2 {
-      0%, 100% { transform: translate(0, 0); }
-      50% { transform: translate(24px, -16px); }
-    }
-
-    .wrap {
-      position: relative;
-      z-index: 1;
+      0%,100% { transform: translate(0,0); }
+      50% { transform: translate(24px,-16px); }
     }
 
     .nav {
@@ -124,7 +105,7 @@
       height: 15px;
       border-radius: 4px;
       background: linear-gradient(135deg, var(--gold-2), var(--gold));
-      box-shadow: 0 0 24px rgba(215, 169, 71, 0.4);
+      box-shadow: 0 0 24px rgba(215,169,71,0.4);
     }
 
     .nav-links {
@@ -137,18 +118,15 @@
       color: var(--muted);
       text-decoration: none;
       font-size: 0.95rem;
-      transition: color 0.25s ease;
     }
 
-    .nav-links a:hover {
-      color: var(--text);
-    }
+    .nav-links a:hover { color: var(--text); }
 
     .nav-links .nav-cta {
       padding: 11px 16px;
       border-radius: 999px;
-      border: 1px solid rgba(215, 169, 71, 0.35);
-      background: rgba(215, 169, 71, 0.08);
+      border: 1px solid rgba(215,169,71,0.35);
+      background: rgba(215,169,71,0.08);
       color: var(--gold-2);
     }
 
@@ -157,7 +135,7 @@
       margin: 0 auto;
       min-height: 88vh;
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 34px;
       align-items: center;
       padding: 36px 24px 40px;
@@ -198,13 +176,13 @@
 
     .gold {
       color: var(--gold);
-      text-shadow: 0 0 28px rgba(215, 169, 71, 0.12);
+      text-shadow: 0 0 28px rgba(215,169,71,0.12);
     }
 
     .lead {
       margin-top: 22px;
       max-width: 720px;
-      font-size: clamp(1.07rem, 1.4vw, 1.26rem);
+      font-size: clamp(1.07rem, 1.4vw, 1.24rem);
       line-height: 1.78;
       color: var(--muted);
     }
@@ -227,43 +205,6 @@
       font-size: 0.92rem;
     }
 
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 34px;
-    }
-
-    .btn {
-      appearance: none;
-      border: 0;
-      text-decoration: none;
-      padding: 16px 24px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 1rem;
-      min-width: 210px;
-      text-align: center;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      color: #1c1408;
-      background: linear-gradient(135deg, var(--gold-2), var(--gold));
-      box-shadow: 0 14px 32px rgba(215, 169, 71, 0.22);
-    }
-
-    .btn-secondary {
-      color: var(--text);
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.15);
-    }
-
     .hero-note {
       margin-top: 18px;
       max-width: 680px;
@@ -274,7 +215,7 @@
 
     .hero-visual {
       position: relative;
-      min-height: 600px;
+      min-height: 620px;
       opacity: 0;
       transform: translateY(20px);
       animation: riseIn 1s ease 0.12s forwards;
@@ -342,6 +283,112 @@
       font-size: 0.94rem;
       line-height: 1.7;
       color: #d4cabd;
+    }
+
+    .lead-panel {
+      margin-top: 34px;
+      padding: 26px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow);
+      max-width: 720px;
+    }
+
+    .lead-panel h3 {
+      margin: 0 0 10px;
+      font-size: 1.5rem;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .lead-panel p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .lead-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .field label {
+      font-size: 0.9rem;
+      color: #e9dfcf;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      border-radius: 14px;
+      padding: 14px 14px;
+      font: inherit;
+      outline: none;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: #9f9588;
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .lead-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin-top: 18px;
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      text-decoration: none;
+      padding: 16px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      min-width: 210px;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      color: #1c1408;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      box-shadow: 0 14px 32px rgba(215,169,71,0.22);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .tiny-note {
+      color: rgba(255,255,255,0.52);
+      font-size: 0.83rem;
+      line-height: 1.65;
+      margin-top: 10px;
     }
 
     .sections {
@@ -484,16 +531,6 @@
       font-weight: 800;
     }
 
-    .inline-link {
-      display: inline-flex;
-      margin-top: 18px;
-      text-decoration: none;
-      color: var(--gold-2);
-      font-weight: 700;
-      border-bottom: 1px solid rgba(215,169,71,0.38);
-      padding-bottom: 2px;
-    }
-
     .pricing {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -601,87 +638,28 @@
     }
 
     @keyframes riseIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 1080px) {
-      .hero,
-      .trio,
-      .split,
-      .pricing {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: auto;
-      }
-
-      .hero-visual {
-        min-height: 500px;
-        order: -1;
-      }
-
-      .visual-frame {
-        inset: 0;
-      }
-
-      .portrait {
-        width: min(72%, 320px);
-        right: 14px;
-      }
+      .hero, .trio, .split, .pricing { grid-template-columns: 1fr; }
+      .hero { min-height: auto; }
+      .hero-visual { min-height: 500px; order: -1; }
+      .visual-frame { inset: 0; }
+      .portrait { width: min(72%, 320px); right: 14px; }
     }
 
     @media (max-width: 720px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero,
-      .sections,
-      footer {
-        padding-left: 18px;
-        padding-right: 18px;
-      }
-
-      .cta-row {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-        min-width: 0;
-      }
-
-      .hero-visual {
-        min-height: 410px;
-      }
-
-      .portrait {
-        width: min(76%, 250px);
-        right: 10px;
-      }
-
-      .portrait-card {
-        left: 14px;
-        top: 14px;
-        width: calc(100% - 110px);
-        padding: 16px;
-      }
-
-      .panel,
-      .card,
-      .price-card,
-      .final-cta {
-        padding: 22px;
-      }
-
-      footer {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .nav-links { display: none; }
+      .hero, .sections, footer { padding-left: 18px; padding-right: 18px; }
+      .lead-grid { grid-template-columns: 1fr; }
+      .lead-actions { flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; min-width: 0; }
+      .hero-visual { min-height: 410px; }
+      .portrait { width: min(76%, 250px); right: 10px; }
+      .portrait-card { left: 14px; top: 14px; width: calc(100% - 110px); padding: 16px; }
+      .panel, .card, .price-card, .final-cta, .lead-panel { padding: 22px; }
+      footer { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -700,7 +678,7 @@
         <a href="#system">The System</a>
         <a href="#about">About Greg</a>
         <a href="#coaching">Coaching</a>
-        <a class="nav-cta" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Strategy%20Call&body=Hi%20Greg,%20I%20would%20like%20to%20book%20a%20strategy%20call.">Book a Call</a>
+        <a class="nav-cta" href="#connect">Get Started</a>
       </div>
     </nav>
 
@@ -725,17 +703,60 @@
           <li>Business Setup</li>
         </ul>
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://bit.ly/GetSpotlightNow" target="_blank" rel="noopener noreferrer">
-            Download Free Guide
-          </a>
-          <a class="btn btn-secondary" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Strategy%20Call&body=Hi%20Greg,%20I%20would%20like%20to%20book%20a%20strategy%20call.">
-            Book a Strategy Call
-          </a>
-        </div>
-
         <div class="hero-note">
           Optional educational guidance from Greg Lowrance. Thoughtful, polished, practical, and designed to help you move with more confidence and less wasted time.
+        </div>
+
+        <div id="connect" class="lead-panel">
+          <h3>Request Information</h3>
+          <p>
+            Share a few quick details below and your message will be prepared to send directly to Greg at Nucleus Talent.
+          </p>
+
+          <form id="leadForm">
+            <div class="lead-grid">
+              <div class="field">
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+
+              <div class="field">
+                <label for="interest">Area of Interest</label>
+                <select id="interest" name="interest">
+                  <option>General Information</option>
+                  <option>Free Guide</option>
+                  <option>Strategy Call</option>
+                  <option>Business Setup Guidance</option>
+                  <option>Clarity Call</option>
+                  <option>Starter Package</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone (Optional)</label>
+                <input id="phone" name="phone" type="text" placeholder="Optional" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">What would you like help with?</label>
+              <textarea id="message" name="message" placeholder="Tell Greg a little about where you are and what you would like help with."></textarea>
+            </div>
+
+            <div class="lead-actions">
+              <button type="submit" class="btn btn-primary">Send Request</button>
+              <a class="btn btn-secondary" href="https://bit.ly/GetSpotlightNow" target="_blank" rel="noopener noreferrer">Download Free Guide</a>
+            </div>
+
+            <div class="tiny-note">
+              This no-service version opens a prepared email on the visitor’s device so nothing gets lost or sent to a third party.
+            </div>
+          </form>
         </div>
       </div>
 
@@ -748,7 +769,7 @@
             </p>
           </div>
 
-          <img src="greg.jpg" alt="Greg Lowrance" class="portrait" />
+          <img src="greg.jpeg" alt="Greg Lowrance" class="portrait" />
         </div>
       </div>
     </section>
@@ -758,25 +779,17 @@
         <div class="card">
           <div class="icon">✦</div>
           <h3>Get Clear</h3>
-          <p>
-            Understand what matters first so your effort goes into the right moves instead of scattered activity.
-          </p>
+          <p>Understand what matters first so your effort goes into the right moves instead of scattered activity.</p>
         </div>
-
         <div class="card">
           <div class="icon">✦</div>
           <h3>Look More Professional</h3>
-          <p>
-            Sharpen how you present yourself so preventable mistakes do not undercut your opportunities.
-          </p>
+          <p>Sharpen how you present yourself so preventable mistakes do not undercut your opportunities.</p>
         </div>
-
         <div class="card">
           <div class="icon">✦</div>
           <h3>Move Smarter</h3>
-          <p>
-            Learn how to approach acting, print, commercials, production, and business setup with more structure.
-          </p>
+          <p>Learn how to approach acting, print, commercials, production, and business setup with more structure.</p>
         </div>
       </section>
 
@@ -788,45 +801,11 @@
           </div>
 
           <div class="steps">
-            <div class="step">
-              <div class="step-num">1</div>
-              <div>
-                <h4>Foundation</h4>
-                <p>Build a stronger base so your materials, direction, and next moves all work together.</p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-num">2</div>
-              <div>
-                <h4>Commercials</h4>
-                <p>Understand how the commercial world works and how to present yourself more effectively within it.</p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-num">3</div>
-              <div>
-                <h4>Commercial Lifestyle Print</h4>
-                <p>See where your look may fit and how print opportunities can support a broader career path.</p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-num">4</div>
-              <div>
-                <h4>Acting</h4>
-                <p>Get clearer on positioning, professionalism, and how to avoid some of the most common mistakes.</p>
-              </div>
-            </div>
-
-            <div class="step">
-              <div class="step-num">5</div>
-              <div>
-                <h4>Production</h4>
-                <p>Gain a more practical understanding of the production side so your industry knowledge is more complete.</p>
-              </div>
-            </div>
+            <div class="step"><div class="step-num">1</div><div><h4>Foundation</h4><p>Build a stronger base so your materials, direction, and next moves all work together.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div><h4>Commercials</h4><p>Understand how the commercial world works and how to present yourself more effectively within it.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div><h4>Commercial Lifestyle Print</h4><p>See where your look may fit and how print opportunities can support a broader career path.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div><h4>Acting</h4><p>Get clearer on positioning, professionalism, and how to avoid some of the most common mistakes.</p></div></div>
+            <div class="step"><div class="step-num">5</div><div><h4>Production</h4><p>Gain a more practical understanding of the production side so your industry knowledge is more complete.</p></div></div>
           </div>
         </div>
 
@@ -842,10 +821,6 @@
             <li>Get practical guidance on setup steps without confusion or overcomplication.</li>
             <li>Confirm any legal, tax, or accounting specifics with your own qualified professionals.</li>
           </ul>
-
-          <a class="inline-link" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Business%20Setup%20Guidance&body=Hi%20Greg,%20I%20would%20like%20more%20information%20about%20business%20setup%20guidance.">
-            Ask About Business Setup
-          </a>
         </div>
       </section>
 
@@ -869,9 +844,7 @@
             This is not about hype or noise. It is about seeing the business more clearly, presenting yourself more strongly, and making better decisions with your time, money, and energy.
           </div>
 
-          <a class="btn btn-primary" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Question&body=Hi%20Greg,%20I%20have%20a%20question%20about%20Spotlight%20Success.">
-            Email Greg Directly
-          </a>
+          <a class="btn btn-primary" href="#connect">Request Information</a>
         </div>
       </section>
 
@@ -887,36 +860,21 @@
               <div class="label">Entry Point</div>
               <div class="price">$95</div>
               <div class="price-title">Clarity Call</div>
-              <p>
-                A focused conversation designed to help you get sharper on what matters most right now.
-              </p>
-              <a class="inline-link" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Clarity%20Call&body=Hi%20Greg,%20I%20am%20interested%20in%20the%20$95%20Clarity%20Call.">
-                Request This Call
-              </a>
+              <p>A focused conversation designed to help you get sharper on what matters most right now.</p>
             </div>
 
             <div class="price-card featured">
               <div class="label">Most Popular</div>
               <div class="price">$175</div>
               <div class="price-title">Strategy Session</div>
-              <p>
-                A deeper session for people who want more tailored guidance around direction, materials, and positioning.
-              </p>
-              <a class="inline-link" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Strategy%20Session&body=Hi%20Greg,%20I%20am%20interested%20in%20the%20$175%20Strategy%20Session.">
-                Request This Session
-              </a>
+              <p>A deeper session for people who want more tailored guidance around direction, materials, and positioning.</p>
             </div>
 
             <div class="price-card">
               <div class="label">Expanded Support</div>
               <div class="price">$495</div>
               <div class="price-title">Starter Package</div>
-              <p>
-                A more involved option for those who want broader guidance and a stronger starting structure.
-              </p>
-              <a class="inline-link" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Starter%20Package&body=Hi%20Greg,%20I%20am%20interested%20in%20the%20$495%20Starter%20Package.">
-                Request Details
-              </a>
+              <p>A more involved option for those who want broader guidance and a stronger starting structure.</p>
             </div>
           </div>
         </div>
@@ -925,16 +883,12 @@
       <section class="final-cta reveal">
         <h2>Move Forward With More Confidence</h2>
         <p>
-          Start with the free guide or reach out directly if you want a more tailored conversation about your next step.
+          Start with the free guide or send a direct request if you want a more tailored conversation about your next step.
         </p>
 
-        <div class="cta-row" style="justify-content:center;">
-          <a class="btn btn-primary" href="https://bit.ly/GetSpotlightNow" target="_blank" rel="noopener noreferrer">
-            Download Free Guide
-          </a>
-          <a class="btn btn-secondary" href="mailto:info@nucleustalent.com?subject=Spotlight%20Success%20Strategy%20Call&body=Hi%20Greg,%20I%20would%20like%20to%20book%20a%20strategy%20call.">
-            Book a Strategy Call
-          </a>
+        <div class="lead-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="#connect">Request Information</a>
+          <a class="btn btn-secondary" href="https://bit.ly/GetSpotlightNow" target="_blank" rel="noopener noreferrer">Download Free Guide</a>
         </div>
       </section>
 
@@ -952,13 +906,39 @@
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("visible");
       });
     }, { threshold: 0.12 });
 
     document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+    function trackLead(name) {
+      try {
+        window.va && window.va('event', { name: name });
+      } catch (e) {}
+    }
+
+    document.getElementById('leadForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const interest = document.getElementById('interest').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Spotlight Success Inquiry - ' + interest);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'Phone: ' + (phone || 'Not provided') + '\n' +
+        'Area of Interest: ' + interest + '\n\n' +
+        'Message:\n' + (message || 'No message provided')
+      );
+
+      trackLead('lead_form_submit');
+      window.location.href = 'mailto:info@nucleustalent.com?subject=' + subject + '&body=' + body;
+    });
   </script>
 </body>
 </html>
