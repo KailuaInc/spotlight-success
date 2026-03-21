@@ -75,7 +75,7 @@
         radial-gradient(circle at 90% 12%, rgba(216,170,73,0.09), transparent 20%),
         radial-gradient(circle at 12% 88%, rgba(216,170,73,0.08), transparent 18%),
         linear-gradient(180deg, #050505 0%, #0b0b0b 52%, #050505 100%);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
       overflow-x:hidden;
     }
 
@@ -1278,84 +1278,6 @@
       line-height:1.68;
     }
 
-    .modal{
-      position:fixed;
-      inset:0;
-      z-index:100;
-      display:none;
-      align-items:center;
-      justify-content:center;
-      padding:20px;
-      background:rgba(0,0,0,.70);
-      backdrop-filter:blur(8px);
-    }
-
-    .modal.open{
-      display:flex;
-    }
-
-    .modal-card{
-      width:min(680px, 100%);
-      border-radius:26px;
-      border:1px solid rgba(255,255,255,.10);
-      background:linear-gradient(180deg, rgba(20,20,20,.98), rgba(10,10,10,.98));
-      box-shadow:0 30px 90px rgba(0,0,0,.46);
-      overflow:hidden;
-    }
-
-    .modal-head{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      padding:20px 22px;
-      border-bottom:1px solid rgba(255,255,255,.07);
-    }
-
-    .modal-head h3{
-      margin:0;
-      font-size:1.2rem;
-    }
-
-    .modal-close{
-      width:40px;
-      height:40px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.09);
-      background:rgba(255,255,255,.03);
-      color:var(--text);
-      cursor:pointer;
-      font-size:1.2rem;
-      line-height:1;
-    }
-
-    .modal-body{
-      padding:22px;
-    }
-
-    .modal-body p{
-      margin:0 0 18px;
-      color:var(--muted);
-      line-height:1.78;
-    }
-
-    .modal-list{
-      list-style:none;
-      padding:0;
-      margin:0;
-      display:grid;
-      gap:12px;
-    }
-
-    .modal-list li{
-      padding:14px 16px;
-      border-radius:16px;
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.07);
-      color:#ece3d6;
-      line-height:1.68;
-    }
-
     @keyframes riseIn{
       to{
         opacity:1;
@@ -1950,73 +1872,76 @@
 
       <section id="pricing" class="container section-stack">
         <div class="section-head reveal center">
-          <div class="eyebrow">Options</div>
-          <h2>Choose the Right Starting Point</h2>
+          <div class="eyebrow">Pricing</div>
+          <h2>Coaching &amp; Training Options</h2>
           <p class="max-760">
-            Start with a focused clarity conversation, move into deeper strategy, or choose a more expanded package if you want broader support from the start.
+            Choose the level of support that best fits where you are right now.
           </p>
         </div>
 
         <div class="pricing reveal">
           <div class="price-card">
-            <div class="label">Entry Point</div>
-            <div class="price">$95</div>
+            <div class="label">Starter Option</div>
+            <div class="price">$125</div>
             <div class="price-title">Clarity Call</div>
             <p>
-              A focused starting conversation for people who want practical direction, cleaner priorities, and a stronger sense of what to do next.
+              A focused introductory session for people who want direction, practical insight,
+              and a clearer understanding of what their smartest next move should be.
             </p>
 
             <ul class="price-features">
-              <li>Focused one-on-one call</li>
-              <li>Practical direction on current priorities</li>
-              <li>Cleaner next-step clarity</li>
-              <li>Ideal first step if you want guidance before going deeper</li>
+              <li>One focused clarity session</li>
+              <li>Direction on your current position</li>
+              <li>Practical next-step guidance</li>
+              <li>Best for people who want a strong starting point</li>
             </ul>
 
             <div class="price-actions">
-              <a class="btn-inline btn-gold" href="https://buy.stripe.com/eVq00jawI6JCeleaLg9bO09" target="_blank" rel="noopener noreferrer">Pay &amp; Book</a>
+              <a class="btn-inline btn-gold" href="https://buy.stripe.com/eVq00jawI6JCeleaLg9bO09" target="_blank" rel="noopener noreferrer">Book $125 Clarity Call</a>
               <a class="btn-inline btn-ghost" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">View Calendar</a>
             </div>
           </div>
 
           <div class="price-card featured">
             <div class="label">Most Popular</div>
-            <div class="price">$175</div>
+            <div class="price">$295</div>
             <div class="price-title">Strategy Session</div>
             <p>
-              A deeper strategy-focused session for people who want more tailored guidance around positioning, presentation, direction, and professional decision-making.
+              A deeper strategy session for people who want stronger guidance around positioning,
+              presentation, industry direction, and more thoughtful decision-making.
             </p>
 
             <ul class="price-features">
-              <li>Deeper strategic review</li>
-              <li>Tailored positioning guidance</li>
-              <li>Stronger recommendations around direction and presentation</li>
-              <li>Best fit for people ready to move with more intention now</li>
+              <li>Deeper one-on-one strategy session</li>
+              <li>Positioning and presentation guidance</li>
+              <li>Sharper direction and stronger priorities</li>
+              <li>Best for people ready to move more seriously now</li>
             </ul>
 
             <div class="price-actions">
-              <a class="btn-inline btn-gold" href="https://buy.stripe.com/7sY3cv34g5Fycd68D89bO08" target="_blank" rel="noopener noreferrer">Pay &amp; Book</a>
+              <a class="btn-inline btn-gold" href="https://buy.stripe.com/7sY3cv34g5Fycd68D89bO08" target="_blank" rel="noopener noreferrer">Book $295 Strategy Session</a>
               <a class="btn-inline btn-ghost" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">View Calendar</a>
             </div>
           </div>
 
           <div class="price-card">
             <div class="label">Expanded Support</div>
-            <div class="price">$495</div>
+            <div class="price">$695</div>
             <div class="price-title">Starter Package</div>
             <p>
-              A more involved package for people who want a broader, stronger foundation and a more expanded level of guidance from the beginning.
+              A broader support option for people who want a stronger foundation, more expanded
+              guidance, and a more serious launch point from the beginning.
             </p>
 
             <ul class="price-features">
-              <li>Expanded strategic support</li>
-              <li>Broader clarity around structure and next moves</li>
-              <li>Designed for serious action-takers who want more than one quick conversation</li>
-              <li>Strongest starting option for people ready to build with intention</li>
+              <li>Expanded coaching support</li>
+              <li>Broader clarity and planning guidance</li>
+              <li>Built for serious action-takers</li>
+              <li>Best for people who want a stronger overall starting structure</li>
             </ul>
 
             <div class="price-actions">
-              <a class="btn-inline btn-gold" href="https://buy.stripe.com/14A9ATgV6fg81yscTo9bO07" target="_blank" rel="noopener noreferrer">Pay &amp; Book</a>
+              <a class="btn-inline btn-gold" href="https://buy.stripe.com/14A9ATgV6fg81yscTo9bO07" target="_blank" rel="noopener noreferrer">Book $695 Starter Package</a>
               <a class="btn-inline btn-ghost" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">View Calendar</a>
             </div>
           </div>
@@ -2025,17 +1950,19 @@
         <div class="panel reveal" style="margin-top:24px;">
           <div class="section-head">
             <div class="eyebrow">Before You Book</div>
-            <h2>What You Can Expect</h2>
+            <h2>Choose Based on Readiness</h2>
             <p>
-              The focus is clarity, stronger positioning, and better decision-making — not hype, not confusion, and not promises that no one can ethically make.
+              If you want a focused starting point, begin with the Clarity Call.
+              If you already know you want deeper guidance, choose the Strategy Session.
+              If you want broader support from the start, choose the Starter Package.
             </p>
           </div>
 
           <ul class="checklist">
-            <li>Direct, professional feedback</li>
-            <li>Practical thinking around next steps</li>
-            <li>Guidance built around your stated goals</li>
-            <li>A more structured approach to momentum</li>
+            <li>$125 Clarity Call for focused direction</li>
+            <li>$295 Strategy Session for deeper guidance</li>
+            <li>$695 Starter Package for expanded support</li>
+            <li>All booking links go directly to secure Stripe checkout</li>
           </ul>
 
           <div class="who-not">
