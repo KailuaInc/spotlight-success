@@ -114,24 +114,26 @@
     }
 
     .nav{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:22px 24px 0;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-    }
+  max-width:var(--max);
+  margin:0 auto;
+  padding:22px 24px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  width:100%;
+}
 
     .brand{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      text-decoration:none;
-      color:var(--text);
-      font-weight:700;
-      letter-spacing:.02em;
-    }
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:var(--text);
+  font-weight:700;
+  letter-spacing:.02em;
+  flex-shrink:0;
+}
       .brand img{
       height:22px;
       display:block;
@@ -145,10 +147,11 @@
     }
 
     .nav-links{
-      display:flex;
-      align-items:center;
-      gap:20px;
-    }
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-left:auto;
+}
 
     .nav-links a{
       color:var(--muted);
