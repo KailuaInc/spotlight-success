@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ========================================================= -->
-  <!-- BASIC META -->
-  <!-- ========================================================= -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -34,15 +31,7 @@
   />
   <meta name="twitter:image" content="https://project-x9g7f.vercel.app/spotlight-preview.jpg" />
 
-  <!-- ========================================================= -->
-  <!-- FONT STACK NOTE -->
-  <!-- ========================================================= -->
-  <!-- Keeping this simple and reliable with system fonts only. -->
-
   <style>
-    /* ========================================================= */
-    /* ROOT */
-    /* ========================================================= */
     :root{
       --bg:#050505;
       --bg-2:#0a0a0a;
@@ -70,9 +59,6 @@
       --nav-height:84px;
     }
 
-    /* ========================================================= */
-    /* RESET */
-    /* ========================================================= */
     *{
       box-sizing:border-box;
     }
@@ -125,9 +111,6 @@
       color:#fff;
     }
 
-    /* ========================================================= */
-    /* GLOBAL HELPERS */
-    /* ========================================================= */
     .wrap{
       position:relative;
       z-index:1;
@@ -138,8 +121,8 @@
       margin:0 auto;
     }
 
-    .section{
-      padding:36px 0;
+    .section-stack{
+      padding:12px 0 102px;
     }
 
     .reveal{
@@ -177,52 +160,12 @@
       color:var(--gold);
     }
 
-    .muted{
-      color:var(--muted);
-    }
-
-    .center{
-      text-align:center;
-    }
-
-    .max-760{
-      max-width:760px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-    .max-820{
-      max-width:820px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-    .max-920{
-      max-width:920px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-
     .tiny{
       font-size:.84rem;
       line-height:1.66;
       color:rgba(255,255,255,.52);
     }
 
-    .spacer-8{ height:8px; }
-    .spacer-12{ height:12px; }
-    .spacer-16{ height:16px; }
-    .spacer-20{ height:20px; }
-    .spacer-24{ height:24px; }
-    .spacer-28{ height:28px; }
-    .spacer-32{ height:32px; }
-    .spacer-40{ height:40px; }
-    .spacer-48{ height:48px; }
-    .spacer-56{ height:56px; }
-
-    /* ========================================================= */
-    /* DECOR GLOWS */
-    /* ========================================================= */
     .glow{
       position:fixed;
       border-radius:999px;
@@ -274,9 +217,6 @@
       50%{ transform:translate(-16px,10px) scale(1.05); }
     }
 
-    /* ========================================================= */
-    /* NAV */
-    /* ========================================================= */
     .site-header{
       position:sticky;
       top:0;
@@ -449,9 +389,6 @@
       border-color:transparent;
     }
 
-    /* ========================================================= */
-    /* HERO */
-    /* ========================================================= */
     .hero{
       padding:44px 0 38px;
       min-height:calc(100vh - var(--nav-height));
@@ -465,13 +402,6 @@
       opacity:0;
       transform:translateY(18px);
       animation:riseIn .9s ease forwards;
-    }
-
-    .hero-logo{
-      width:108px;
-      height:auto;
-      margin-bottom:18px;
-      filter:drop-shadow(0 0 18px rgba(216,170,73,.14));
     }
 
     .hero h1{
@@ -634,9 +564,6 @@
       color:#d4cabd;
     }
 
-    /* ========================================================= */
-    /* LEAD PANEL */
-    /* ========================================================= */
     .lead-panel{
       margin-top:34px;
       padding:28px;
@@ -791,13 +718,6 @@
       color:#ffd6d6;
     }
 
-    /* ========================================================= */
-    /* GENERIC CARD SECTIONS */
-    /* ========================================================= */
-    .section-stack{
-      padding:12px 0 102px;
-    }
-
     .section-head{
       margin-bottom:30px;
     }
@@ -816,6 +736,16 @@
       font-size:1.03rem;
       line-height:1.82;
       max-width:780px;
+    }
+
+    .center{
+      text-align:center;
+    }
+
+    .max-760{
+      max-width:760px;
+      margin-left:auto;
+      margin-right:auto;
     }
 
     .trio{
@@ -975,9 +905,6 @@
       font-size:.96rem;
     }
 
-    /* ========================================================= */
-    /* FEATURE STRIP */
-    /* ========================================================= */
     .feature-strip{
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -1006,9 +933,6 @@
       line-height:1.66;
     }
 
-    /* ========================================================= */
-    /* PROCESS GRID */
-    /* ========================================================= */
     .process-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -1051,9 +975,6 @@
       font-size:.96rem;
     }
 
-    /* ========================================================= */
-    /* COACHING / PRICING */
-    /* ========================================================= */
     .pricing{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -1158,9 +1079,6 @@
       color:var(--text);
     }
 
-    /* ========================================================= */
-    /* TESTIMONIALS */
-    /* ========================================================= */
     .testimonial-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -1202,9 +1120,6 @@
       font-size:.90rem;
     }
 
-    /* ========================================================= */
-    /* FAQ */
-    /* ========================================================= */
     .faq{
       display:grid;
       gap:14px;
@@ -1252,9 +1167,6 @@
       display:block;
     }
 
-    /* ========================================================= */
-    /* FINAL CTA */
-    /* ========================================================= */
     .final-cta{
       margin-top:28px;
       padding:40px 24px;
@@ -1282,9 +1194,6 @@
       font-size:1.02rem;
     }
 
-    /* ========================================================= */
-    /* CONTACT */
-    /* ========================================================= */
     .contact-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -1318,9 +1227,6 @@
       margin-top:18px;
     }
 
-    /* ========================================================= */
-    /* FOOTER */
-    /* ========================================================= */
     footer{
       border-top:1px solid rgba(255,255,255,.06);
       margin-top:20px;
@@ -1372,9 +1278,6 @@
       line-height:1.68;
     }
 
-    /* ========================================================= */
-    /* MODAL */
-    /* ========================================================= */
     .modal{
       position:fixed;
       inset:0;
@@ -1453,9 +1356,6 @@
       line-height:1.68;
     }
 
-    /* ========================================================= */
-    /* ANIMATIONS */
-    /* ========================================================= */
     @keyframes riseIn{
       to{
         opacity:1;
@@ -1463,9 +1363,6 @@
       }
     }
 
-    /* ========================================================= */
-    /* RESPONSIVE */
-    /* ========================================================= */
     @media (max-width:1160px){
       .hero,
       .trio,
@@ -1509,10 +1406,6 @@
 
       .hero{
         padding-top:28px;
-      }
-
-      .hero-logo{
-        width:92px;
       }
 
       .lead-grid{
@@ -1606,17 +1499,11 @@
   </style>
 </head>
 <body>
-  <!-- ========================================================= -->
-  <!-- DECOR -->
-  <!-- ========================================================= -->
   <div class="glow one"></div>
   <div class="glow two"></div>
   <div class="glow three"></div>
 
   <div class="wrap">
-    <!-- ======================================================= -->
-    <!-- HEADER -->
-    <!-- ======================================================= -->
     <header class="site-header">
       <div class="container">
         <nav class="nav" aria-label="Primary">
@@ -1667,18 +1554,9 @@
       </div>
     </header>
 
-    <!-- ======================================================= -->
-    <!-- HERO -->
-    <!-- ======================================================= -->
     <main id="top">
       <section class="container hero">
         <div class="hero-copy">
-          <img
-            src="ChatGPT Image Mar 21, 2026, 09_23_41 AM.png"
-            alt="Spotlight Success logo"
-            class="hero-logo"
-          />
-
           <div class="eyebrow">Coaching and Training Brand</div>
 
           <h1>
@@ -1714,9 +1592,9 @@
           <div id="connect" class="lead-panel">
             <div class="lead-panel-header">
               <div class="lead-panel-title-wrap">
-                <h3>Spotlight Success</h3>
+                <h3>Spotlight Success Intake</h3>
                 <p>
-                  Share a few details below and your request will be reviewed with the appropriate next steps.
+                  Share a few details below and your request will be reviewed with the most appropriate next steps.
                 </p>
               </div>
 
@@ -1801,9 +1679,6 @@
         </div>
       </section>
 
-      <!-- ===================================================== -->
-      <!-- QUICK VALUE CARDS -->
-      <!-- ===================================================== -->
       <section class="container section-stack">
         <div class="trio reveal">
           <div class="card">
@@ -1854,9 +1729,6 @@
         </div>
       </section>
 
-      <!-- ===================================================== -->
-      <!-- SYSTEM -->
-      <!-- ===================================================== -->
       <section id="system" class="container section-stack">
         <div class="split reveal">
           <div class="panel">
@@ -1993,9 +1865,6 @@
         </div>
       </section>
 
-      <!-- ===================================================== -->
-      <!-- APPROACH -->
-      <!-- ===================================================== -->
       <section id="approach" class="container section-stack">
         <div class="split reveal">
           <div class="panel">
@@ -2041,56 +1910,50 @@
         </div>
       </section>
 
-      <!-- ===================================================== -->
-      <!-- COACHING -->
-      <!-- ===================================================== -->
       <section id="coaching" class="container section-stack">
         <div class="panel reveal">
           <div class="section-head">
             <div class="eyebrow">Coaching</div>
-            <h2>Optional Coaching</h2>
+            <h2>Coaching Designed for Clarity and Professional Momentum</h2>
             <p>
-              These are structured conversations designed to provide clarity, direction, and practical next steps.
+              These sessions are built to help you think more clearly, position yourself more professionally, and make stronger decisions about your next steps.
             </p>
           </div>
 
           <div class="trio">
             <div class="card">
               <div class="icon">✓</div>
-              <h3>Professional Focus</h3>
+              <h3>Focused Feedback</h3>
               <p>
-                Sessions are designed to help you get sharper on what matters most, not overload you with noise.
+                Sessions are designed to cut through confusion and bring attention back to what actually matters.
               </p>
             </div>
 
             <div class="card">
               <div class="icon">✓</div>
-              <h3>Actionable Direction</h3>
+              <h3>Better Positioning</h3>
               <p>
-                The goal is to leave with cleaner priorities and clearer practical next steps.
+                Get cleaner perspective on presentation, professional tone, and the choices that support your direction.
               </p>
             </div>
 
             <div class="card">
               <div class="icon">✓</div>
-              <h3>Selective Fit</h3>
+              <h3>Stronger Next Steps</h3>
               <p>
-                Not everyone is a fit, and that is intentional. The right people get the best outcome.
+                The goal is not just information. The goal is clearer, smarter movement after the session ends.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ===================================================== -->
-      <!-- PRICING -->
-      <!-- ===================================================== -->
       <section id="pricing" class="container section-stack">
         <div class="section-head reveal center">
           <div class="eyebrow">Options</div>
-          <h2>Coaching Options</h2>
+          <h2>Choose the Right Starting Point</h2>
           <p class="max-760">
-            Start with a smaller entry point or choose a deeper strategy option if you already know you want more tailored guidance.
+            Start with a focused clarity conversation, move into deeper strategy, or choose a more expanded package if you want broader support from the start.
           </p>
         </div>
 
@@ -2100,19 +1963,19 @@
             <div class="price">$95</div>
             <div class="price-title">Clarity Call</div>
             <p>
-              A focused conversation designed to help you get sharper on what matters most right now.
+              A focused starting conversation for people who want practical direction, cleaner priorities, and a stronger sense of what to do next.
             </p>
 
             <ul class="price-features">
               <li>Focused one-on-one call</li>
-              <li>Direction on current priorities</li>
-              <li>Better next-step clarity</li>
-              <li>Simple practical guidance</li>
+              <li>Practical direction on current priorities</li>
+              <li>Cleaner next-step clarity</li>
+              <li>Ideal first step if you want guidance before going deeper</li>
             </ul>
 
             <div class="price-actions">
-              <a class="btn-inline btn-gold" href="#" data-stripe="clarity">Pay &amp; Book</a>
-              <a class="btn-inline btn-ghost" href="#connect">Ask First</a>
+              <a class="btn-inline btn-gold" href="https://buy.stripe.com/eVq00jawI6JCeleaLg9bO09" target="_blank" rel="noopener noreferrer">Pay &amp; Book</a>
+              <a class="btn-inline btn-ghost" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">View Calendar</a>
             </div>
           </div>
 
@@ -2121,19 +1984,19 @@
             <div class="price">$175</div>
             <div class="price-title">Strategy Session</div>
             <p>
-              A deeper session for people who want more tailored guidance around direction, materials, and positioning.
+              A deeper strategy-focused session for people who want more tailored guidance around positioning, presentation, direction, and professional decision-making.
             </p>
 
             <ul class="price-features">
               <li>Deeper strategic review</li>
-              <li>Positioning-focused guidance</li>
-              <li>More tailored recommendations</li>
-              <li>Stronger structure and next steps</li>
+              <li>Tailored positioning guidance</li>
+              <li>Stronger recommendations around direction and presentation</li>
+              <li>Best fit for people ready to move with more intention now</li>
             </ul>
 
             <div class="price-actions">
-              <a class="btn-inline btn-gold" href="#" data-stripe="strategy">Pay &amp; Book</a>
-              <a class="btn-inline btn-ghost" href="#connect">Ask First</a>
+              <a class="btn-inline btn-gold" href="https://buy.stripe.com/7sY3cv34g5Fycd68D89bO08" target="_blank" rel="noopener noreferrer">Pay &amp; Book</a>
+              <a class="btn-inline btn-ghost" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">View Calendar</a>
             </div>
           </div>
 
@@ -2142,19 +2005,19 @@
             <div class="price">$495</div>
             <div class="price-title">Starter Package</div>
             <p>
-              A more involved option for those who want broader guidance and a stronger starting structure.
+              A more involved package for people who want a broader, stronger foundation and a more expanded level of guidance from the beginning.
             </p>
 
             <ul class="price-features">
-              <li>Expanded guidance structure</li>
-              <li>Broader strategic support</li>
-              <li>Better starting framework</li>
-              <li>Designed for serious action-takers</li>
+              <li>Expanded strategic support</li>
+              <li>Broader clarity around structure and next moves</li>
+              <li>Designed for serious action-takers who want more than one quick conversation</li>
+              <li>Strongest starting option for people ready to build with intention</li>
             </ul>
 
             <div class="price-actions">
-              <a class="btn-inline btn-gold" href="#" data-stripe="starter">Pay &amp; Book</a>
-              <a class="btn-inline btn-ghost" href="#connect">Ask First</a>
+              <a class="btn-inline btn-gold" href="https://buy.stripe.com/14A9ATgV6fg81yscTo9bO07" target="_blank" rel="noopener noreferrer">Pay &amp; Book</a>
+              <a class="btn-inline btn-ghost" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">View Calendar</a>
             </div>
           </div>
         </div>
@@ -2184,9 +2047,6 @@
         </div>
       </section>
 
-      <!-- ===================================================== -->
-      <!-- TESTIMONIALS -->
-      <!-- ===================================================== -->
       <section class="container section-stack">
         <div class="section-head reveal center">
           <div class="eyebrow">Feedback</div>
@@ -2226,9 +2086,6 @@
         </div>
       </section>
 
-      <!-- ===================================================== -->
-      <!-- FAQ -->
-      <!-- ===================================================== -->
       <section id="faq" class="container section-stack">
         <div class="panel reveal">
           <div class="section-head">
@@ -2293,19 +2150,16 @@
         </div>
       </section>
 
-      <!-- ===================================================== -->
-      <!-- CONTACT / FINAL CTA -->
-      <!-- ===================================================== -->
       <section class="container section-stack">
         <div class="final-cta reveal">
           <h2>Take a More Structured Approach</h2>
           <p>
-            Start with the free guide, submit a request, or choose a coaching option if you are ready to approach this more professionally.
+            Start with the free guide, submit a request, or choose the coaching option that best matches where you are right now.
           </p>
 
           <div class="lead-actions" style="justify-content:center;">
             <a class="btn btn-primary" href="#connect">Submit Request</a>
-            <a class="btn btn-secondary" href="https://bit.ly/GetSpotlightNow" target="_blank" rel="noopener noreferrer">Download Free Guide</a>
+            <a class="btn btn-secondary" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">Open Calendar</a>
           </div>
         </div>
 
@@ -2322,13 +2176,13 @@
           </div>
 
           <div class="contact-card">
-            <h3>Booking &amp; Payment</h3>
+            <h3>Booking &amp; Scheduling</h3>
             <p>
-              Stripe links can be connected here for each coaching option. For now, the buttons above are ready for your Stripe URLs.
+              You can book through the payment links above and use the calendar to select an appointment time that works best.
             </p>
 
             <div class="contact-actions">
-              <button class="btn-inline btn-ghost" id="stripeHelpButton" type="button">View Stripe Setup Note</button>
+              <a class="btn-inline btn-ghost" href="https://calendar.google.com/calendar/u/0/r/appointment?pli=1" target="_blank" rel="noopener noreferrer">Open Calendar</a>
             </div>
           </div>
         </div>
@@ -2339,9 +2193,6 @@
       </section>
     </main>
 
-    <!-- ======================================================= -->
-    <!-- FOOTER -->
-    <!-- ======================================================= -->
     <footer>
       <div class="container footer-inner">
         <div class="footer-brand">
@@ -2362,51 +2213,12 @@
     </footer>
   </div>
 
-  <!-- ========================================================= -->
-  <!-- MODAL -->
-  <!-- ========================================================= -->
-  <div class="modal" id="stripeModal" aria-hidden="true">
-    <div class="modal-card">
-      <div class="modal-head">
-        <h3>Stripe Setup Note</h3>
-        <button class="modal-close" id="stripeModalClose" aria-label="Close">×</button>
-      </div>
-
-      <div class="modal-body">
-        <p>
-          Your pricing buttons are already in place. To make them live, replace the placeholder links in the code with your actual Stripe payment links.
-        </p>
-
-        <ul class="modal-list">
-          <li><strong>Clarity Call:</strong> replace the button with your $95 Stripe link.</li>
-          <li><strong>Strategy Session:</strong> replace the button with your $175 Stripe link.</li>
-          <li><strong>Starter Package:</strong> replace the button with your $495 Stripe link.</li>
-          <li><strong>Optional:</strong> after payment, you can send people to a calendar link or thank-you page.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================= -->
-  <!-- SCRIPT -->
-  <!-- ========================================================= -->
   <script>
-    /* ======================================================= */
-    /* CONFIG */
-    /* ======================================================= */
     const CONFIG = {
       inquiryEmail: "info@nucleustalent.com",
-      stripeLinks: {
-        clarity: "#",
-        strategy: "#",
-        starter: "#"
-      },
-      calendarLink: "#"
+      calendarLink: "https://calendar.google.com/calendar/u/0/r/appointment?pli=1"
     };
 
-    /* ======================================================= */
-    /* REVEAL ANIMATIONS */
-    /* ======================================================= */
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -2419,9 +2231,6 @@
       revealObserver.observe(el);
     });
 
-    /* ======================================================= */
-    /* MOBILE MENU */
-    /* ======================================================= */
     const menuToggle = document.getElementById("menuToggle");
     const mobileDrawer = document.getElementById("mobileDrawer");
 
@@ -2439,9 +2248,6 @@
       });
     }
 
-    /* ======================================================= */
-    /* FAQ */
-    /* ======================================================= */
     document.querySelectorAll(".faq-item").forEach((item) => {
       const button = item.querySelector(".faq-question");
       button.addEventListener("click", () => {
@@ -2461,9 +2267,6 @@
       });
     });
 
-    /* ======================================================= */
-    /* INTAKE FORM */
-    /* ======================================================= */
     const leadForm = document.getElementById("leadForm");
     const formStatus = document.getElementById("formStatus");
 
@@ -2485,11 +2288,11 @@
 
         const subject = encodeURIComponent("Spotlight Success Inquiry");
         const body = encodeURIComponent(
-          "Name: " + name + "\\n" +
-          "Email: " + email + "\\n" +
-          "Primary Interest: " + interest + "\\n" +
-          "Current Readiness: " + readiness + "\\n\\n" +
-          "Message:\\n" + (message || "No message provided")
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Primary Interest: " + interest + "\n" +
+          "Current Readiness: " + readiness + "\n\n" +
+          "Message:\n" + (message || "No message provided")
         );
 
         formStatus.className = "form-status show success";
@@ -2499,69 +2302,6 @@
       });
     }
 
-    /* ======================================================= */
-    /* STRIPE BUTTONS */
-    /* ======================================================= */
-    document.querySelectorAll("[data-stripe]").forEach((button) => {
-      button.addEventListener("click", (e) => {
-        e.preventDefault();
-        const key = button.getAttribute("data-stripe");
-        const url = CONFIG.stripeLinks[key];
-
-        if (url && url !== "#") {
-          window.location.href = url;
-        } else {
-          openStripeModal();
-        }
-      });
-    });
-
-    /* ======================================================= */
-    /* STRIPE MODAL */
-    /* ======================================================= */
-    const stripeHelpButton = document.getElementById("stripeHelpButton");
-    const stripeModal = document.getElementById("stripeModal");
-    const stripeModalClose = document.getElementById("stripeModalClose");
-
-    function openStripeModal() {
-      if (!stripeModal) return;
-      stripeModal.classList.add("open");
-      stripeModal.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeStripeModal() {
-      if (!stripeModal) return;
-      stripeModal.classList.remove("open");
-      stripeModal.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
-    }
-
-    if (stripeHelpButton) {
-      stripeHelpButton.addEventListener("click", openStripeModal);
-    }
-
-    if (stripeModalClose) {
-      stripeModalClose.addEventListener("click", closeStripeModal);
-    }
-
-    if (stripeModal) {
-      stripeModal.addEventListener("click", (e) => {
-        if (e.target === stripeModal) {
-          closeStripeModal();
-        }
-      });
-    }
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        closeStripeModal();
-      }
-    });
-
-    /* ======================================================= */
-    /* SMOOTH CLOSE MOBILE ON HASH NAV */
-    /* ======================================================= */
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", () => {
         if (mobileDrawer) {
@@ -2571,6 +2311,15 @@
           menuToggle.setAttribute("aria-expanded", "false");
         }
       });
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mobileDrawer) {
+        mobileDrawer.classList.remove("open");
+        if (menuToggle) {
+          menuToggle.setAttribute("aria-expanded", "false");
+        }
+      }
     });
   </script>
 </body>
