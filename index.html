@@ -18,7 +18,7 @@
     content="Spotlight Success, Greg Lowrance, entertainment coaching, acting coaching, commercials, print modeling, production guidance, industry strategy"
   />
   <meta name="theme-color" content="#090909" />
-  <link rel="canonical" href="https://getspotlightsuccess.com/" />
+  <link rel="canonical" href="https://www.getspotlightsuccess.com/" />
 
   <!-- FINAL SEO + SOCIAL PREVIEW -->
   <meta property="og:type" content="website" />
@@ -27,14 +27,14 @@
     property="og:description"
     content="Break into commercials, print, acting, and production with real industry guidance."
   />
-  <meta property="og:url" content="https://getspotlightsuccess.com/" />
+  <meta property="og:url" content="https://www.getspotlightsuccess.com/" />
   <meta
     property="og:image"
-    content="https://getspotlightsuccess.com/spotlight-share-preview-v4.png"
+    content="https://www.getspotlightsuccess.com/spotlight-share-preview-v4.png"
   />
   <meta
     property="og:image:secure_url"
-    content="https://getspotlightsuccess.com/spotlight-share-preview-v4.png"
+    content="https://www.getspotlightsuccess.com/spotlight-share-preview-v4.png"
   />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
@@ -49,52 +49,36 @@
   />
   <meta
     name="twitter:image"
-    content="https://getspotlightsuccess.com/spotlight-share-preview-v4.png"
+    content="https://www.getspotlightsuccess.com/spotlight-share-preview-v4.png"
   />
 
-  <!-- Apple / iMessage reinforcement -->
   <link
     rel="image_src"
-    href="https://getspotlightsuccess.com/spotlight-share-preview-v4.png"
+    href="https://www.getspotlightsuccess.com/spotlight-share-preview-v4.png"
   />
   <meta
     itemprop="image"
-    content="https://getspotlightsuccess.com/spotlight-share-preview-v4.png"
+    content="https://www.getspotlightsuccess.com/spotlight-share-preview-v4.png"
   />
 
   <style>
     :root {
       --bg: #070707;
-      --bg-2: #0b0b0b;
-      --bg-3: #101010;
       --panel: rgba(255, 255, 255, 0.045);
-      --panel-2: rgba(255, 255, 255, 0.06);
-      --panel-3: rgba(255, 255, 255, 0.035);
       --line: rgba(255, 255, 255, 0.09);
-      --line-strong: rgba(255, 255, 255, 0.14);
       --text: #f6f2e9;
       --muted: #cbbfae;
       --soft: #a99c8a;
       --gold: #d6aa47;
       --gold-2: #f0d28f;
-      --gold-3: #b98728;
       --shadow: 0 20px 60px rgba(0, 0, 0, 0.42);
       --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.24);
-      --radius-xl: 32px;
-      --radius-lg: 26px;
-      --radius-md: 20px;
-      --radius-sm: 16px;
       --max: 1240px;
       --nav-h: 84px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -120,51 +104,20 @@
         radial-gradient(circle at center, transparent 58%, rgba(0,0,0,0.15) 100%);
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
 
-    a {
-      color: inherit;
-    }
-
-    button,
-    input,
-    select,
-    textarea {
-      font: inherit;
-    }
-
-    ::selection {
-      background: rgba(214, 170, 71, 0.28);
-      color: #fff;
-    }
-
-    .page-wrap {
-      position: relative;
-      z-index: 1;
-    }
-
-    .container {
-      width: min(var(--max), calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .section {
-      padding: 28px 0 110px;
-    }
+    .page-wrap { position: relative; z-index: 1; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
+    .section { padding: 28px 0 110px; }
 
     .reveal {
       opacity: 0;
       transform: translateY(22px);
       transition: opacity 0.82s ease, transform 0.82s ease;
     }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
     .eyebrow {
       display: inline-flex;
@@ -186,15 +139,8 @@
       display: block;
     }
 
-    .gold {
-      color: var(--gold);
-    }
-
-    .max-760 {
-      max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    .gold { color: var(--gold); }
+    .max-760 { max-width: 760px; margin-left: auto; margin-right: auto; }
 
     .glow {
       position: fixed;
@@ -211,7 +157,6 @@
       top: -130px;
       right: -100px;
       background: rgba(214, 170, 71, 0.52);
-      animation: drift1 16s ease-in-out infinite;
     }
 
     .glow.two {
@@ -220,7 +165,6 @@
       bottom: -120px;
       left: -80px;
       background: rgba(214, 170, 71, 0.34);
-      animation: drift2 19s ease-in-out infinite;
     }
 
     .glow.three {
@@ -229,22 +173,6 @@
       top: 42%;
       left: 47%;
       background: rgba(214, 170, 71, 0.12);
-      animation: drift3 21s ease-in-out infinite;
-    }
-
-    @keyframes drift1 {
-      0%,100% { transform: translate(0,0); }
-      50% { transform: translate(-18px, 14px); }
-    }
-
-    @keyframes drift2 {
-      0%,100% { transform: translate(0,0); }
-      50% { transform: translate(22px, -16px); }
-    }
-
-    @keyframes drift3 {
-      0%,100% { transform: translate(0,0) scale(1); }
-      50% { transform: translate(-16px, 10px) scale(1.04); }
     }
 
     .site-header {
@@ -291,11 +219,6 @@
       width: 24px;
       height: 24px;
       object-fit: contain;
-      filter: drop-shadow(0 0 10px rgba(214,170,71,0.16));
-    }
-
-    .brand-text {
-      min-width: 0;
     }
 
     .brand-title {
@@ -338,9 +261,7 @@
       transition: color 0.22s ease;
     }
 
-    .nav-links a:hover {
-      color: var(--text);
-    }
+    .nav-links a:hover { color: var(--text); }
 
     .nav-cta {
       display: inline-flex;
@@ -354,15 +275,7 @@
       color: var(--gold-2);
       border: 1px solid rgba(214,170,71,0.34);
       background: rgba(214,170,71,0.08);
-      transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.14);
       white-space: nowrap;
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-1px);
-      background: rgba(214,170,71,0.12);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
     }
 
     .menu-toggle {
@@ -395,9 +308,7 @@
       padding: 12px 0 18px;
     }
 
-    .mobile-drawer.open {
-      display: block;
-    }
+    .mobile-drawer.open { display: block; }
 
     .mobile-links {
       display: grid;
@@ -430,9 +341,8 @@
     }
 
     .hero-copy {
-      opacity: 0;
-      transform: translateY(18px);
-      animation: riseIn 0.9s ease forwards;
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .hero h1 {
@@ -452,9 +362,7 @@
       color: var(--muted);
     }
 
-    .hero-lead + .hero-lead {
-      margin-top: 18px;
-    }
+    .hero-lead + .hero-lead { margin-top: 18px; }
 
     .micro-points {
       list-style: none;
@@ -504,15 +412,6 @@
       font-size: 1rem;
       cursor: pointer;
       white-space: nowrap;
-      transition:
-        transform 0.24s ease,
-        box-shadow 0.24s ease,
-        background 0.24s ease,
-        border-color 0.24s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
     }
 
     .btn-primary {
@@ -530,9 +429,6 @@
     .hero-visual {
       position: relative;
       min-height: 660px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: riseIn 1s ease 0.12s forwards;
     }
 
     .visual-frame {
@@ -553,8 +449,7 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(to left, rgba(8,8,8,0.02), rgba(8,8,8,0.52) 65%, rgba(8,8,8,0.9) 100%),
-        linear-gradient(to top, rgba(8,8,8,0.12), rgba(8,8,8,0) 30%);
+        linear-gradient(to left, rgba(8,8,8,0.02), rgba(8,8,8,0.52) 65%, rgba(8,8,8,0.9) 100%);
       z-index: 2;
       pointer-events: none;
     }
@@ -568,7 +463,6 @@
       object-fit: cover;
       object-position: center top;
       border-radius: 24px 24px 0 0;
-      filter: contrast(1.02) saturate(1.03) drop-shadow(0 18px 36px rgba(0,0,0,0.34));
       z-index: 1;
     }
 
@@ -672,15 +566,6 @@
       border-radius: 14px;
       padding: 14px 14px;
       outline: none;
-      transition: border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
-    }
-
-    .field input:focus,
-    .field select:focus,
-    .field textarea:focus {
-      border-color: rgba(214,170,71,0.38);
-      background: rgba(255,255,255,0.05);
-      box-shadow: 0 0 0 3px rgba(214,170,71,0.10);
     }
 
     .field input::placeholder,
@@ -733,9 +618,7 @@
       border: 1px solid transparent;
     }
 
-    .form-status.show {
-      display: block;
-    }
+    .form-status.show { display: block; }
 
     .form-status.success {
       background: rgba(79,179,120,0.10);
@@ -1243,9 +1126,7 @@
       line-height: 1.78;
     }
 
-    .faq-item.open .faq-answer {
-      display: block;
-    }
+    .faq-item.open .faq-answer { display: block; }
 
     .final-cta {
       margin-top: 28px;
@@ -1355,16 +1236,7 @@
       color: rgba(255,255,255,0.50);
     }
 
-    .footer-links a:hover {
-      color: var(--text);
-    }
-
-    @keyframes riseIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    .footer-links a:hover { color: var(--text); }
 
     @media (max-width: 1160px) {
       .hero,
@@ -1378,18 +1250,14 @@
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        min-height: auto;
-      }
+      .hero { min-height: auto; }
 
       .hero-visual {
         min-height: 520px;
         order: -1;
       }
 
-      .visual-frame {
-        inset: 0;
-      }
+      .visual-frame { inset: 0; }
 
       .portrait {
         width: min(72%, 320px);
@@ -1403,23 +1271,13 @@
         display: none;
       }
 
-      .menu-toggle {
-        display: flex;
-      }
-
-      .hero {
-        padding-top: 28px;
-      }
-
-      .lead-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .menu-toggle { display: flex; }
+      .hero { padding-top: 28px; }
+      .lead-grid { grid-template-columns: 1fr; }
       .lead-panel-header {
         flex-direction: column;
         align-items: flex-start;
       }
-
       .footer-inner {
         flex-direction: column;
         align-items: flex-start;
@@ -1431,9 +1289,7 @@
         width: min(var(--max), calc(100% - 28px));
       }
 
-      .hero-visual {
-        min-height: 420px;
-      }
+      .hero-visual { min-height: 420px; }
 
       .portrait {
         width: min(76%, 250px);
@@ -1472,27 +1328,14 @@
         width: 100%;
       }
 
-      .brand-subtitle {
-        display: none;
-      }
+      .brand-subtitle { display: none; }
     }
 
     @media (max-width: 520px) {
-      .brand-title {
-        font-size: 0.95rem;
-      }
-
-      .hero h1 {
-        font-size: clamp(3rem, 13vw, 4.2rem);
-      }
-
-      .micro-points {
-        gap: 10px;
-      }
-
-      .micro-points li {
-        font-size: 0.88rem;
-      }
+      .brand-title { font-size: 0.95rem; }
+      .hero h1 { font-size: clamp(3rem, 13vw, 4.2rem); }
+      .micro-points { gap: 10px; }
+      .micro-points li { font-size: 0.88rem; }
     }
   </style>
 </head>
@@ -1615,7 +1458,12 @@
               <div class="lead-chip">Selective Intake</div>
             </div>
 
-            <form id="leadForm">
+            <form
+              id="leadForm"
+              action="GOOGLE_SCRIPT_WEB_APP_URL"
+              method="POST"
+              target="leadCaptureFrame"
+            >
               <div class="lead-grid">
                 <div class="field">
                   <label for="name">Full Name</label>
@@ -1672,6 +1520,12 @@
                   placeholder="Briefly describe where you are, what you are building, and what kind of guidance you are looking for."
                 ></textarea>
               </div>
+
+              <input
+                type="hidden"
+                name="source"
+                value="https://www.getspotlightsuccess.com/"
+              />
 
               <div class="qualification">
                 This is designed for people looking for clarity, structure, and a more
@@ -1873,9 +1727,7 @@
               <div class="process-number">A</div>
             </div>
             <h3>Assess</h3>
-            <p>
-              Begin by understanding where you actually are, not where you hope you are.
-            </p>
+            <p>Begin by understanding where you actually are, not where you hope you are.</p>
           </div>
 
           <div class="process-card">
@@ -1884,9 +1736,7 @@
               <div class="process-number">B</div>
             </div>
             <h3>Clarify</h3>
-            <p>
-              Define what matters most so your next moves become more intentional.
-            </p>
+            <p>Define what matters most so your next moves become more intentional.</p>
           </div>
 
           <div class="process-card">
@@ -1977,9 +1827,7 @@
         <div class="guide-layout reveal">
           <div class="guide-preview">
             <div class="guide-kicker">Free Download</div>
-            <h3>
-              Clarity is the difference between movement and momentum.
-            </h3>
+            <h3>Clarity is the difference between movement and momentum.</h3>
             <p>
               This guide is designed to simplify the landscape so people can think more
               clearly, move more intentionally, and avoid early mistakes that cost time,
@@ -2002,38 +1850,14 @@
             <h3>What’s Inside</h3>
 
             <ul class="guide-pages">
-              <li>
-                <strong>1</strong>
-                <span>Welcome and a cleaner way to think about getting started.</span>
-              </li>
-              <li>
-                <strong>2</strong>
-                <span>The 4 core paths: commercials, print, acting, and production.</span>
-              </li>
-              <li>
-                <strong>3</strong>
-                <span>Common beginner mistakes that waste time, money, and momentum.</span>
-              </li>
-              <li>
-                <strong>4</strong>
-                <span>What professionals tend to do differently.</span>
-              </li>
-              <li>
-                <strong>5</strong>
-                <span>Why positioning matters so much from the beginning.</span>
-              </li>
-              <li>
-                <strong>6</strong>
-                <span>A quick self-assessment to help people gauge where they really are.</span>
-              </li>
-              <li>
-                <strong>7</strong>
-                <span>Simple next steps built around clarity, focus, and intentional action.</span>
-              </li>
-              <li>
-                <strong>8</strong>
-                <span>A clear bridge from information to direct guidance.</span>
-              </li>
+              <li><strong>1</strong><span>Welcome and a cleaner way to think about getting started.</span></li>
+              <li><strong>2</strong><span>The 4 core paths: commercials, print, acting, and production.</span></li>
+              <li><strong>3</strong><span>Common beginner mistakes that waste time, money, and momentum.</span></li>
+              <li><strong>4</strong><span>What professionals tend to do differently.</span></li>
+              <li><strong>5</strong><span>Why positioning matters so much from the beginning.</span></li>
+              <li><strong>6</strong><span>A quick self-assessment to help people gauge where they really are.</span></li>
+              <li><strong>7</strong><span>Simple next steps built around clarity, focus, and intentional action.</span></li>
+              <li><strong>8</strong><span>A clear bridge from information to direct guidance.</span></li>
             </ul>
           </div>
         </div>
@@ -2043,9 +1867,7 @@
         <div class="section-head center reveal">
           <div class="eyebrow">Pricing</div>
           <h2>Coaching &amp; Training Options</h2>
-          <p class="max-760">
-            Choose the level of support that best fits where you are right now.
-          </p>
+          <p class="max-760">Choose the level of support that best fits where you are right now.</p>
         </div>
 
         <div class="pricing reveal">
@@ -2348,13 +2170,13 @@
     </footer>
   </div>
 
-  <script>
-    const CONFIG = {
-      inquiryEmail: "info@nucleustalent.com",
-      calendarLink: "https://calendar.google.com/calendar/u/0/r/appointment?pli=1",
-      guideLink: "/Spotlight_Success_Cinematic_Guide_v2.pdf"
-    };
+  <iframe
+    name="leadCaptureFrame"
+    id="leadCaptureFrame"
+    style="display:none;"
+  ></iframe>
 
+  <script>
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -2409,39 +2231,22 @@
 
     if (leadForm && formStatus) {
       leadForm.addEventListener("submit", function(e) {
-        e.preventDefault();
-
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
-        const interest = document.getElementById("interest").value.trim();
-        const readiness = document.getElementById("readiness").value.trim();
-        const message = document.getElementById("message").value.trim();
 
         if (!name || !email) {
+          e.preventDefault();
           formStatus.className = "form-status show error";
           formStatus.textContent = "Please enter your name and email address.";
           return;
         }
 
-        const subject = encodeURIComponent("Spotlight Success Inquiry");
-        const body = encodeURIComponent(
-          "Name: " + name + "\n" +
-          "Email: " + email + "\n" +
-          "Primary Interest: " + interest + "\n" +
-          "Current Readiness: " + readiness + "\n\n" +
-          "Message:\n" + (message || "No message provided")
-        );
-
         formStatus.className = "form-status show success";
-        formStatus.textContent =
-          "Opening your email app now. If nothing happens, email " +
-          CONFIG.inquiryEmail +
-          " directly.";
+        formStatus.textContent = "Thank you. Your request has been submitted.";
 
-        window.location.href =
-          "mailto:" + CONFIG.inquiryEmail +
-          "?subject=" + subject +
-          "&body=" + body;
+        setTimeout(() => {
+          leadForm.reset();
+        }, 700);
       });
     }
 
