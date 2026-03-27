@@ -2228,26 +2228,56 @@
 
     const leadForm = document.getElementById("leadForm");
     const formStatus = document.getElementById("formStatus");
+const leadForm = document.getElementById("leadForm");
+const formStatus = document.getElementById("formStatus");
 
-    if (leadForm && formStatus) {
-      leadForm.addEventListener("submit", function(e) {
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
+if (leadForm && formStatus) {
+  leadForm.addEventListener("submit", async function(e) {
+    e.preventDefault();
 
-        if (!name || !email) {
-          e.preventDefault();
-          formStatus.className = "form-status show error";
-          formStatus.textContent = "Please enter your name and email address.";
-          return;
-        }
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const interest = document.getElementById("interest")?.value || "";
+    const readiness = document.getElementById("readiness")?.value || "";
+    const message = document.getElementById("message")?.value || "";
 
-        formStatus.className = "form-status show success";
-        formStatus.textContent = "Thank you. Your request has been submitted.";
+    if (!name || !email) {
+      formStatus.className = "form-status show error";
+      formStatus.textContent = "Please enter your name and email address.";
+      return;
+    }
 
-        setTimeout(() => {
-          leadForm.reset();
-        }, 700);
+    formStatus.className = "form-status";
+    formStatus.textContent = "Submitting...";
+
+    try {
+      const response = await fetch("PASTE_YOUR_WEB_APP_URL_HERE", {
+        method: "POST",
+        body: new URLSearchParams({
+          name,
+          email,
+          interest,
+          readiness,
+          message
+        })
       });
+
+      const text = await response.text();
+
+      if (!response.ok || text.startsWith("ERROR")) {
+        throw new Error(text || "Submission failed");
+      }
+
+      formStatus.className = "form-status show success";
+      formStatus.textContent = "Thank you. Your request has been submitted.";
+      leadForm.reset();
+    } catch (err) {
+      formStatus.className = "form-status show error";
+      formStatus.textContent = "ERROR: " + (err.message || "Submission failed");
+      console.error(err);
+    }
+  });
+}
     }
 
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
