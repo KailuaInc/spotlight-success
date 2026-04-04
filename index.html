@@ -2214,33 +2214,65 @@
       });
     });
 
-    const leadForm = document.getElementById("leadForm");
-    const formStatus = document.getElementById("formStatus");
+const leadForm = document.getElementById("leadForm");
+const formStatus = document.getElementById("formStatus");
+
+if (leadForm && formStatus) {
+  leadForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const interest = document.getElementById("interest")?.value || "";
+    const readiness = document.getElementById("readiness")?.value || "";
+    const message = document.getElementById("message")?.value || "";
+
+    if (!name || !email) {
+      formStatus.className = "form-status show error";
+      formStatus.textContent = "Please enter your name and email address.";
+      return;
+    }
 
     formStatus.className = "form-status show";
     formStatus.textContent = "Submitting...";
 
-    fetch("https://script.google.com/macros/s/AKfycbZ7bQWQzriEPm-X12Nfr-u01zBC28IfK7Yunw02saxHBXoysfI0dnc1NEEqnoRWgJICXw/exec", {
-      method: "POST",
-      body: new URLSearchParams({
-        name: name,
-        email: email,
-        interest: interest,
-        readiness: readiness,
-        message: message,
-        source: window.location.href
-      })
-    })
-    .then(res => res.text())
-    .then(() => {
-      formStatus.className = "form-status show success";
-      formStatus.textContent = "Thank you. Your request has been submitted.";
-      leadForm.reset();
-    })
-    .catch(() => {
-      formStatus.className = "form-status show error";
-      formStatus.textContent = "Submission failed. Please try again.";
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = "https://script.google.com/macros/s/AKfycbZ7bQWQzriEPm-X12Nfr-u01zBC28IfK7Yunw02saxHBXoysfI0dnc1NEEqnoRWgJICXw/exec";
+    form.target = "leadCaptureFrame";
+    form.style.display = "none";
+
+    const fields = {
+      name: name,
+      email: email,
+      interest: interest,
+      readiness: readiness,
+      message: message,
+      source: window.location.href
+    };
+
+    Object.keys(fields).forEach(function (key) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = key;
+      input.value = fields[key];
+      form.appendChild(input);
     });
+
+    document.body.appendChild(form);
+
+    const frame = document.getElementById("leadCaptureFrame");
+    if (frame) {
+      frame.onload = function () {
+        formStatus.className = "form-status show success";
+        formStatus.textContent = "Thank you. Your request has been submitted.";
+        leadForm.reset();
+        form.remove();
+        frame.onload = null;
+      };
+    }
+
+    form.submit();
   });
 }
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
