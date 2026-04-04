@@ -2217,32 +2217,6 @@
     const leadForm = document.getElementById("leadForm");
     const formStatus = document.getElementById("formStatus");
 
-    if (leadForm && formStatus) {
-      leadForm.addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const interest = document.getElementById("interest")?.value || "";
-        const readiness = document.getElementById("readiness")?.value || "";
-        const message = document.getElementById("message")?.value || "";
-
-        if (leadForm && formStatus) {
-  leadForm.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const interest = document.getElementById("interest").value;
-    const readiness = document.getElementById("readiness").value;
-    const message = document.getElementById("message").value.trim();
-
-    if (!name || !email) {
-      formStatus.className = "form-status show error";
-      formStatus.textContent = "Please enter your name and email address.";
-      return;
-    }
-
     formStatus.className = "form-status show";
     formStatus.textContent = "Submitting...";
 
