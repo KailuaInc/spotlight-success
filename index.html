@@ -2259,8 +2259,6 @@ if (leadForm && formStatus) {
       form.appendChild(input);
     });
 
-    document.body.appendChild(form);
-
     const frame = document.getElementById("leadCaptureFrame");
     if (frame) {
       frame.onload = function () {
@@ -2271,10 +2269,8 @@ if (leadForm && formStatus) {
         frame.onload = null;
       };
     }
-
+    document.body.appendChild(form);
     form.submit();
-  });
-}
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", () => {
         if (mobileDrawer) {
