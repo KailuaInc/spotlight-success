@@ -2236,31 +2236,13 @@ if (leadForm && formStatus) {
     formStatus.className = "form-status show";
     formStatus.textContent = "Submitting...";
 
-  
-   if (leadForm && formStatus) {
-   leadForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const interest = document.getElementById("interest")?.value || "";
-    const readiness = document.getElementById("readiness")?.value || "";
-    const message = document.getElementById("message")?.value || "";
-
-    if (!name || !email) {
-      formStatus.className = "form-status show error";
-      formStatus.textContent = "Please enter your name and email address.";
-      return;
-    }
-
-    formStatus.className = "form-status show";
-    formStatus.textContent = "Submitting...";
-
     const form = document.createElement("form");
     form.method = "POST";
     form.target = "leadCaptureFrame";
     form.style.display = "none";
+
     form.action = "https://script.google.com/macros/s/AKfycbz7bQWQzriEPm-X12Nfr-uO1zBC28lFk7Ynuw02saxHBXoysflOdnc1NEEqnoRWgJlCXw/exec";
+
     const fields = {
       name,
       email,
@@ -2281,6 +2263,7 @@ if (leadForm && formStatus) {
     document.body.appendChild(form);
 
     const frame = document.getElementById("leadCaptureFrame");
+
     if (frame) {
       frame.onload = function () {
         formStatus.className = "form-status show success";
@@ -2294,8 +2277,3 @@ if (leadForm && formStatus) {
     form.submit();
   });
 }
-      }
-    });
-  </script>
-</body>
-</html>
